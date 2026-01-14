@@ -11,13 +11,21 @@ export default function LocationMap() {
 
   useEffect(() => {
     const initMap = async () => {
+      const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+
+      // Skip map initialization if no API key
+      if (!apiKey) {
+        console.warn('Google Maps API key not configured');
+        return;
+      }
+
       const loader = new Loader({
-        apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
+        apiKey,
         version: 'weekly',
       });
 
       const { Map } = await loader.importLibrary('maps');
-      const { Marker } = await loader.importLibrary('marker');
+      const { AdvancedMarkerElement } = await loader.importLibrary('marker');
 
       if (mapRef.current && !mapInstanceRef.current) {
         // Coordinates for Krustpils 31, Plavnieki, Riga
@@ -28,9 +36,10 @@ export default function LocationMap() {
           zoom: 15,
           mapTypeControl: false,
           streetViewControl: false,
+          mapId: 'GARAGE_LOCATION_MAP', // Required for AdvancedMarkerElement
         });
 
-        new Marker({
+        new AdvancedMarkerElement({
           position,
           map,
           title: 'Garage Location',

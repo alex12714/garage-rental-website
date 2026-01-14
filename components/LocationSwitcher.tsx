@@ -77,6 +77,8 @@ export default function LocationSwitcher({ onLocationChange }: LocationSwitcherP
                   src={selectedLocation.video}
                   controls
                   autoPlay
+                  playsInline
+                  muted
                   className="w-full h-full object-cover"
                   onEnded={() => setIsVideoPlaying(false)}
                 >

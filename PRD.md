@@ -86,9 +86,9 @@ A single-page web application for hourly garage rental services in Riga, Latvia.
 
 ### 3.2 API Keys & Credentials
 ```plaintext
-Stripe API Key: [REDACTED]
-Google Maps API Key: [REDACTED]
-Webhook URL: [REDACTED]
+Stripe API Key: [REDACTED - stored in .env file on server]
+Google Maps API Key: [REDACTED - stored in .env file on server]
+Webhook URL: [REDACTED - stored in .env file on server]
 ```
 
 ### 3.3 Calendar Embed Code
@@ -473,10 +473,10 @@ Testimonial 3 (LV):
 
 ### 14.2 Environment Variables
 ```env
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=rk_live_...
-STRIPE_SECRET_KEY=sk_live_...
-NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=AIzaSyBuhdQHrF4713cD...
-WEBHOOK_URL=https://hook.eu1.make.com/wjoytd8mobl...
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=[REDACTED]
+STRIPE_SECRET_KEY=[REDACTED]
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=[REDACTED]
+WEBHOOK_URL=[REDACTED]
 ```
 
 ### 14.3 Folder Structure

@@ -136,10 +136,10 @@ garage-rental-website/
 When deploying (Vercel/Netlify/etc.), manually add these environment variables in the hosting platform dashboard:
 
 ```
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_live_...
-STRIPE_SECRET_KEY=sk_live_...
-NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=AIzaSyBuhdQHrF4713cD...
-WEBHOOK_URL=https://hook.eu1.make.com/wjoytd8mobl...
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=[REDACTED]
+STRIPE_SECRET_KEY=[REDACTED]
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=[REDACTED]
+WEBHOOK_URL=[REDACTED]
 NEXT_PUBLIC_SITE_URL=https://yourdomain.com
 ```
 

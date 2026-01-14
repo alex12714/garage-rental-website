@@ -27,10 +27,10 @@
 ### 🔐 Environment Variables (Configured)
 
 ```env
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=[REDACTED]...  ✅
-STRIPE_SECRET_KEY=[REDACTED]...                   ✅
-NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=[REDACTED]         ✅
-WEBHOOK_URL=[REDACTED]              ✅
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=[REDACTED]         ✅
+STRIPE_SECRET_KEY=[REDACTED]                           ✅
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=[REDACTED]            ✅
+WEBHOOK_URL=[REDACTED]                                 ✅
 NEXT_PUBLIC_SITE_URL=https://garage.podbrezsky.com     ✅
 ```
 
