@@ -69,7 +69,12 @@
     "custom": "Custom duration",
     "customDescription": "Need a different time frame? We'll calculate the price for you",
     "vat": "Prices include VAT",
-    "hours": "hours"
+    "hours": "hours",
+    "mostPopular": "MOST POPULAR",
+    "heatedSpace": "Heated Space",
+    "electricityIncluded": "Electricity Included",
+    "secureAccess": "Secure Access",
+    "access24x7": "24/7 Access"
   },
   "booking": {
     "title": "Book Your Garage",
@@ -78,6 +83,7 @@
     "customBooking": "Custom Booking",
     "selectLocation": "Select Location",
     "bookNow": "Book Now",
+    "premiumPricing": "Premium location pricing applied",
     "selectDate": "Select Date",
     "startTime": "Start Time",
     "endTime": "End Time",
@@ -141,6 +147,7 @@
   "benefits": {
     "title": "Why Choose Us",
     "subtitle": "Experience the freedom and flexibility of hourly garage rental",
+    "startBookingNow": "Start Booking Now",
     "benefit1": {
       "title": "No Long-Term Contract",
       "description": "Pay only for the hours you need. No monthly commitments, no long-term leases. Book for 1 hour or 1 month."
@@ -216,7 +223,8 @@
     "phone": "+371 2000 0000",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
-    "rights": "All rights reserved"
+    "rights": "All rights reserved",
+    "language": "Language"
   },
   "terms": {
     "title": "Terms & Conditions",

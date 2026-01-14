@@ -69,13 +69,21 @@
     "custom": "Pielāgots laiks",
     "customDescription": "Nepieciešams cits laika periods? Mēs aprēķināsim cenu",
     "vat": "Cenas iekļauj PVN",
-    "hours": "stundas"
+    "hours": "stundas",
+    "mostPopular": "VISPOPULĀRĀKAIS",
+    "heatedSpace": "Apsildīta telpa",
+    "electricityIncluded": "Elektrība iekļauta",
+    "secureAccess": "Droša piekļuve",
+    "access24x7": "24/7 piekļuve"
   },
   "booking": {
     "title": "Rezervē savu garāžu",
     "subtitle": "Izvēlies sev piemērotu datumu un laiku",
     "calendarTitle": "Pieejamības kalendārs",
     "customBooking": "Pielāgota rezervācija",
+    "selectLocation": "Izvēlies atrašanās vietu",
+    "bookNow": "Rezervēt tagad",
+    "premiumPricing": "Piemērota premium atrašanās vietas cena",
     "selectDate": "Izvēlies datumu",
     "startTime": "Sākuma laiks",
     "endTime": "Beigu laiks",
@@ -139,6 +147,7 @@
   "benefits": {
     "title": "Kāpēc izvēlēties mūs",
     "subtitle": "Izbaudi brīvību un elastību ar garāžas īri pa stundām",
+    "startBookingNow": "Sākt rezervāciju tagad",
     "benefit1": {
       "title": "Nav ilgtermiņa līguma",
       "description": "Maksā tikai par stundām, kas Tev nepieciešamas. Nav mēneša saistību, nav ilgtermiņa nomas. Rezervē uz 1 stundu vai 1 mēnesi."
@@ -214,7 +223,8 @@
     "phone": "+371 2000 0000",
     "terms": "Noteikumi un nosacījumi",
     "privacy": "Privātuma politika",
-    "rights": "Visas tiesības aizsargātas"
+    "rights": "Visas tiesības aizsargātas",
+    "language": "Valoda"
   },
   "terms": {
     "title": "Noteikumi un nosacījumi",

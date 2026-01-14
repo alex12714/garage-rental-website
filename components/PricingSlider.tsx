@@ -83,7 +83,7 @@ export default function PricingSlider() {
                 {currentOption.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <span className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                      ⭐ MOST POPULAR
+                      ⭐ {t('pricing.mostPopular')}
                     </span>
                   </div>
                 )}
@@ -123,25 +123,25 @@ export default function PricingSlider() {
                     <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Heated Space</span>
+                    <span>{t('pricing.heatedSpace')}</span>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Electricity Included</span>
+                    <span>{t('pricing.electricityIncluded')}</span>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Secure Access</span>
+                    <span>{t('pricing.secureAccess')}</span>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>24/7 Access</span>
+                    <span>{t('pricing.access24x7')}</span>
                   </div>
                 </div>
               </div>

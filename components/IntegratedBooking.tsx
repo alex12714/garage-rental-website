@@ -423,7 +423,7 @@ export default function IntegratedBooking() {
                   {selectedLocation.id === 'pinki' && (
                     <div className="mt-3 pt-3 border-t border-primary-200">
                       <p className="text-sm text-gray-600 italic">
-                        ⭐ Premium location pricing applied
+                        ⭐ {t('booking.premiumPricing')}
                       </p>
                     </div>
                   )}

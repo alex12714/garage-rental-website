@@ -49,7 +49,7 @@ export default function Footer() {
 
           {/* Language Switcher */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Language</h3>
+            <h3 className="text-lg font-bold mb-4">{t('footer.language')}</h3>
             <LanguageSwitcher />
           </div>
         </div>

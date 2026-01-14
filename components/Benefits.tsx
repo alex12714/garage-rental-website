@@ -64,7 +64,7 @@ export default function Benefits() {
             }}
             className="bg-white text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-50 transition-all transform hover:scale-105 shadow-xl inline-flex items-center gap-2"
           >
-            <span>Start Booking Now</span>
+            <span>{t('benefits.startBookingNow')}</span>
             <span>→</span>
           </button>
         </div>
