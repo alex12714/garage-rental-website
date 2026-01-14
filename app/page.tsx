@@ -3,12 +3,10 @@
 import { useEffect } from 'react';
 import '../lib/i18n';
 import Navigation from '@/components/Navigation';
-import Hero from '@/components/Hero';
+import IntegratedBooking from '@/components/IntegratedBooking';
 import HowItWorks from '@/components/HowItWorks';
 import Benefits from '@/components/Benefits';
-import GarageDetails from '@/components/GarageDetails';
 import PricingSlider from '@/components/PricingSlider';
-import IntegratedBooking from '@/components/IntegratedBooking';
 import Testimonials from '@/components/Testimonials';
 import Trust from '@/components/Trust';
 import FAQ from '@/components/FAQ';
@@ -31,12 +29,10 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <Hero />
+      <IntegratedBooking />
       <HowItWorks />
       <Benefits />
-      <GarageDetails />
       <PricingSlider />
-      <IntegratedBooking />
       <Testimonials />
       <Trust />
       <FAQ />

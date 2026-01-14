@@ -17,9 +17,17 @@ export default function IntegratedBooking() {
   const { t, i18n } = useTranslation();
   const [selectedLocation, setSelectedLocation] = useState<Location>(locations[0]);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-  const [startTime, setStartTime] = useState('');
-  const [endTime, setEndTime] = useState('');
-  const [selectedDate, setSelectedDate] = useState('');
+
+  // Get tomorrow's date
+  const getTomorrowDate = () => {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    return tomorrow.toISOString().split('T')[0];
+  };
+
+  const [startTime, setStartTime] = useState('09:00');
+  const [endTime, setEndTime] = useState('12:00');
+  const [selectedDate, setSelectedDate] = useState(getTomorrowDate());
   const [customerName, setCustomerName] = useState('');
   const [customerEmail, setCustomerEmail] = useState('');
   const [customerPhone, setCustomerPhone] = useState('');
@@ -145,15 +153,21 @@ export default function IntegratedBooking() {
   return (
     <section
       id="booking"
-      className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary-50 to-white"
+      className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 min-h-[600px]"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fadeIn drop-shadow-lg">
             {t('booking.title')}
-          </h2>
-          <p className="text-lg text-gray-600">{t('booking.subtitle')}</p>
+          </h1>
+          <p className="text-xl text-white/90 mb-4 drop-shadow-md">{t('booking.subtitle')}</p>
+          <div className="flex justify-center gap-4 flex-wrap text-white/80 text-sm">
+            <span>⚡ {t('hero.features.electricity')}</span>
+            <span>🌡️ {t('hero.features.heated')}</span>
+            <span>🔒 {t('hero.features.secure')}</span>
+            <span>💳 {t('hero.features.payment')}</span>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
@@ -235,12 +249,12 @@ export default function IntegratedBooking() {
               )}
             </div>
 
-            {/* Location Specifications */}
+            {/* Location Specifications & Features */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 {t('location.specifications')}
               </h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <div className="text-2xl mb-1">📏</div>
                   <div className="text-sm text-gray-600">Size</div>
@@ -267,6 +281,37 @@ export default function IntegratedBooking() {
                   <div className="text-sm text-gray-600">Heating</div>
                   <div className="font-semibold text-gray-900">
                     {selectedLocation.specs.heated ? 'Yes, heated' : 'No heating'}
+                  </div>
+                </div>
+              </div>
+
+              {/* Additional Features */}
+              <div className="border-t pt-4">
+                <h4 className="font-semibold text-gray-900 mb-3">Included Features:</h4>
+                <div className="space-y-2">
+                  <div className="flex items-center text-gray-700">
+                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>24/7 Access</span>
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Secure Access Code</span>
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Online Payment</span>
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Instant Booking</span>
                   </div>
                 </div>
               </div>

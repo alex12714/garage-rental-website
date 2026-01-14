@@ -11,6 +11,13 @@ export default function HowItWorks() {
     { number: 3, key: 'step3', icon: '✅' },
   ];
 
+  const scrollToBooking = () => {
+    const element = document.getElementById('booking');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -71,6 +78,16 @@ export default function HowItWorks() {
           <p className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
             ✨ {t('howItWorks.note')}
           </p>
+        </div>
+
+        {/* Book Now Button */}
+        <div className="mt-12 text-center">
+          <button
+            onClick={scrollToBooking}
+            className="bg-gradient-to-r from-primary-600 to-primary-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all transform hover:scale-105 shadow-lg hover:shadow-2xl"
+          >
+            {t('hero.cta')}
+          </button>
         </div>
       </div>
     </section>
