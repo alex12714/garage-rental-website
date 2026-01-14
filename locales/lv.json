@@ -104,7 +104,18 @@
     "addressValue": "Krustpils iela 31, Pļavnieki, Rīga, Latvija",
     "accessTitle": "Piekļuves instrukcijas",
     "accessDescription": "Vārtu kods un detalizētas piekļuves instrukcijas tiks nosūtītas uz e-pastu pēc maksājuma apstiprinājuma",
-    "directions": "Iegūt norādes"
+    "directions": "Iegūt norādes",
+    "watchVideo": "Skatīt video apskati",
+    "photoGallery": "Foto galerija",
+    "viewPhotos": "Skatīt foto",
+    "specifications": "Garāžas specifikācijas",
+    "includedFeatures": "Iekļautās iespējas:",
+    "feature24x7": "24/7 piekļuve",
+    "featureSecureCode": "Drošs piekļuves kods",
+    "featureOnlinePayment": "Tiešsaistes maksājums",
+    "featureInstantBooking": "Tūlītēja rezervācija",
+    "heatedYes": "Jā, apsildīta",
+    "heatedNo": "Nav apkures"
   },
   "testimonials": {
     "title": "Ko saka mūsu klienti",

@@ -108,7 +108,16 @@
     "accessDescription": "Gate code and detailed access instructions will be sent to your email after payment confirmation",
     "directions": "Get Directions",
     "watchVideo": "Watch Video Tour",
-    "specifications": "Garage Specifications"
+    "photoGallery": "Photo Gallery",
+    "viewPhotos": "View Photos",
+    "specifications": "Garage Specifications",
+    "includedFeatures": "Included Features:",
+    "feature24x7": "24/7 Access",
+    "featureSecureCode": "Secure Access Code",
+    "featureOnlinePayment": "Online Payment",
+    "featureInstantBooking": "Instant Booking",
+    "heatedYes": "Yes, heated",
+    "heatedNo": "No heating"
   },
   "testimonials": {
     "title": "What Our Customers Say",

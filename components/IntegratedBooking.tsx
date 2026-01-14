@@ -249,6 +249,25 @@ export default function IntegratedBooking() {
               )}
             </div>
 
+            {/* Photo Gallery */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <div className="p-4 border-b">
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+                  📸 {t('location.photoGallery')}
+                </h3>
+              </div>
+              <div className="relative h-80">
+                <Image
+                  src={selectedLocation.image}
+                  alt={`${selectedLocation.name} garage photo`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+            </div>
+
             {/* Location Specifications & Features */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -257,61 +276,61 @@ export default function IntegratedBooking() {
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <div className="text-2xl mb-1">📏</div>
-                  <div className="text-sm text-gray-600">Size</div>
+                  <div className="text-sm text-gray-600">{t('garageDetails.size')}</div>
                   <div className="font-semibold text-gray-900">
                     {selectedLocation.specs.size}
                   </div>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <div className="text-2xl mb-1">🚪</div>
-                  <div className="text-sm text-gray-600">Gate Height</div>
+                  <div className="text-sm text-gray-600">{t('garageDetails.gateHeight')}</div>
                   <div className="font-semibold text-gray-900">
                     {selectedLocation.specs.gateHeight}
                   </div>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <div className="text-2xl mb-1">⚡</div>
-                  <div className="text-sm text-gray-600">Electricity</div>
+                  <div className="text-sm text-gray-600">{t('garageDetails.electricity')}</div>
                   <div className="font-semibold text-gray-900">
                     {selectedLocation.specs.electricity}
                   </div>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <div className="text-2xl mb-1">🌡️</div>
-                  <div className="text-sm text-gray-600">Heating</div>
+                  <div className="text-sm text-gray-600">{t('garageDetails.heating')}</div>
                   <div className="font-semibold text-gray-900">
-                    {selectedLocation.specs.heated ? 'Yes, heated' : 'No heating'}
+                    {selectedLocation.specs.heated ? t('location.heatedYes') : t('location.heatedNo')}
                   </div>
                 </div>
               </div>
 
               {/* Additional Features */}
               <div className="border-t pt-4">
-                <h4 className="font-semibold text-gray-900 mb-3">Included Features:</h4>
+                <h4 className="font-semibold text-gray-900 mb-3">{t('location.includedFeatures')}</h4>
                 <div className="space-y-2">
                   <div className="flex items-center text-gray-700">
                     <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>24/7 Access</span>
+                    <span>{t('location.feature24x7')}</span>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Secure Access Code</span>
+                    <span>{t('location.featureSecureCode')}</span>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Online Payment</span>
+                    <span>{t('location.featureOnlinePayment')}</span>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Instant Booking</span>
+                    <span>{t('location.featureInstantBooking')}</span>
                   </div>
                 </div>
               </div>
