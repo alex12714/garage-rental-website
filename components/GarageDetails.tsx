@@ -31,22 +31,23 @@ export default function GarageDetails() {
           {/* Photos */}
           <div className="space-y-4">
             <div className="relative h-64 sm:h-80 bg-gray-200 rounded-xl overflow-hidden shadow-lg">
-              <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                <div className="text-center">
-                  <div className="text-6xl mb-2">🚗</div>
-                  <p className="text-sm">Garage Image 1</p>
-                  <p className="text-xs mt-1">(Add image to public/images/garage-1.jpg)</p>
-                </div>
-              </div>
+              <Image
+                src="/images/garage-1.png"
+                alt="Garage interior - heated space with electricity"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                priority
+              />
             </div>
             <div className="relative h-64 sm:h-80 bg-gray-200 rounded-xl overflow-hidden shadow-lg">
-              <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                <div className="text-center">
-                  <div className="text-6xl mb-2">🏠</div>
-                  <p className="text-sm">Garage Image 2</p>
-                  <p className="text-xs mt-1">(Add image to public/images/garage-2.jpg)</p>
-                </div>
-              </div>
+              <Image
+                src="/images/garage-2.png"
+                alt="Garage exterior - secure access in Plavnieki, Riga"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+              />
             </div>
           </div>
 
