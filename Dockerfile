@@ -23,11 +23,16 @@ WORKDIR /app
 # Set to production
 ENV NODE_ENV=production
 
+# Create public directory first
+RUN mkdir -p ./public
+
 # Copy necessary files from builder
 COPY --from=builder /app/package*.json ./
 COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
 COPY --from=builder /app/node_modules ./node_modules
+
+# Copy public directory (Next.js may create it during build)
+COPY --from=builder --chown=node:node /app/public ./public
 
 # Expose port
 EXPOSE 3000
