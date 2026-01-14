@@ -51,7 +51,11 @@ export const pricingOptions: PricingOption[] = [
   },
 ];
 
-export function calculatePrice(startTime: Date, endTime: Date): number {
+export function calculatePrice(
+  startTime: Date,
+  endTime: Date,
+  locationId: string = 'riga'
+): number {
   const diffMs = endTime.getTime() - startTime.getTime();
   const hours = diffMs / (1000 * 60 * 60);
 
@@ -60,21 +64,29 @@ export function calculatePrice(startTime: Date, endTime: Date): number {
     option => Math.abs(option.hours - hours) < 0.5
   );
 
+  let basePrice = 0;
+
   if (matchingOption) {
-    return matchingOption.price;
+    basePrice = matchingOption.price;
+  } else {
+    // Custom calculation for non-standard durations
+    if (hours <= 1) basePrice = 25;
+    else if (hours <= 3) basePrice = 35;
+    else if (hours <= 8) basePrice = 60;
+    else if (hours <= 72) basePrice = 150;
+    else if (hours <= 168) basePrice = 300;
+    else if (hours <= 336) basePrice = 500;
+    else if (hours <= 720) basePrice = 800;
+    else {
+      // For very long durations, calculate based on hourly rate
+      basePrice = Math.ceil(hours * 5);
+    }
   }
 
-  // Custom calculation for non-standard durations
-  if (hours <= 1) return 25;
-  if (hours <= 3) return 35;
-  if (hours <= 8) return 60;
-  if (hours <= 72) return 150;
-  if (hours <= 168) return 300;
-  if (hours <= 336) return 500;
-  if (hours <= 720) return 800;
+  // Location 3 (Pinki) is premium - double the price
+  const multiplier = locationId === 'pinki' ? 2 : 1;
 
-  // For very long durations, calculate based on hourly rate
-  return Math.ceil(hours * 5);
+  return basePrice * multiplier;
 }
 
 export function calculateDuration(startTime: Date, endTime: Date): {

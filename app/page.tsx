@@ -7,10 +7,8 @@ import Hero from '@/components/Hero';
 import HowItWorks from '@/components/HowItWorks';
 import Benefits from '@/components/Benefits';
 import GarageDetails from '@/components/GarageDetails';
-import LocationSwitcher from '@/components/LocationSwitcher';
 import PricingSlider from '@/components/PricingSlider';
-import BookingCalendarNew from '@/components/BookingCalendarNew';
-import LocationMap from '@/components/LocationMap';
+import IntegratedBooking from '@/components/IntegratedBooking';
 import Testimonials from '@/components/Testimonials';
 import Trust from '@/components/Trust';
 import FAQ from '@/components/FAQ';
@@ -37,10 +35,8 @@ export default function Home() {
       <HowItWorks />
       <Benefits />
       <GarageDetails />
-      <LocationSwitcher />
       <PricingSlider />
-      <BookingCalendarNew />
-      <LocationMap />
+      <IntegratedBooking />
       <Testimonials />
       <Trust />
       <FAQ />

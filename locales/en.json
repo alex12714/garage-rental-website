@@ -76,6 +76,8 @@
     "subtitle": "Select your preferred date and time",
     "calendarTitle": "Availability Calendar",
     "customBooking": "Custom Booking",
+    "selectLocation": "Select Location",
+    "bookNow": "Book Now",
     "selectDate": "Select Date",
     "startTime": "Start Time",
     "endTime": "End Time",
@@ -104,7 +106,9 @@
     "addressValue": "Krustpils 31, Plavnieki, Riga, Latvia",
     "accessTitle": "Access Instructions",
     "accessDescription": "Gate code and detailed access instructions will be sent to your email after payment confirmation",
-    "directions": "Get Directions"
+    "directions": "Get Directions",
+    "watchVideo": "Watch Video Tour",
+    "specifications": "Garage Specifications"
   },
   "testimonials": {
     "title": "What Our Customers Say",
