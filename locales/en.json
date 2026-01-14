@@ -1,0 +1,283 @@
+{
+  "nav": {
+    "bookNow": "Book Now",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "location": "Location",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Hourly Garage Rental in Riga",
+    "subtitle": "Rent a secure, heated garage with electricity by the hour — simple online booking",
+    "cta": "Check Availability",
+    "features": {
+      "location": "Plavnieki, Riga",
+      "pricing": "From €25/hour",
+      "secure": "Secure Access",
+      "electricity": "3A Electricity",
+      "heated": "Heated Space",
+      "payment": "Online Payment"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Book your garage space in 3 simple steps",
+    "step1": {
+      "title": "Choose Date & Time",
+      "description": "Select your preferred date and time slot in the calendar"
+    },
+    "step2": {
+      "title": "Enter Details",
+      "description": "Provide your contact information and booking details"
+    },
+    "step3": {
+      "title": "Pay & Confirm",
+      "description": "Complete secure payment and receive instant confirmation"
+    },
+    "note": "No registration required"
+  },
+  "garageDetails": {
+    "title": "Garage Specifications",
+    "size": "Size",
+    "sizeValue": "3m × 6m (18 m²)",
+    "gateHeight": "Gate Height",
+    "gateHeightValue": "2 meters",
+    "electricity": "Electricity",
+    "electricityValue": "3A available",
+    "heating": "Heating",
+    "heatingValue": "Yes, heated space",
+    "location": "Location",
+    "locationValue": "Krustpils 31, Plavnieki, Riga",
+    "vehicleSize": "Max Vehicle Size",
+    "vehicleSizeValue": "Suitable for standard cars",
+    "security": "Security",
+    "securityValue": "Secure access with gate code",
+    "accessHours": "Access Hours",
+    "accessHoursValue": "24/7 after booking confirmation"
+  },
+  "pricing": {
+    "title": "Transparent Pricing",
+    "subtitle": "Choose the option that fits your needs",
+    "1hour": "1 hour",
+    "3hours": "3 hours",
+    "fullDay": "Full day",
+    "3days": "3 days",
+    "1week": "1 week",
+    "2weeks": "2 weeks",
+    "1month": "1 month",
+    "save": "Save €{{amount}}",
+    "custom": "Custom duration",
+    "customDescription": "Need a different time frame? We'll calculate the price for you",
+    "vat": "Prices include VAT",
+    "hours": "hours"
+  },
+  "booking": {
+    "title": "Book Your Garage",
+    "subtitle": "Select your preferred date and time",
+    "calendarTitle": "Availability Calendar",
+    "customBooking": "Custom Booking",
+    "selectDate": "Select Date",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "duration": "Duration",
+    "totalPrice": "Total Price",
+    "contactInfo": "Contact Information",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "specialRequests": "Special Requests (optional)",
+    "termsAgreement": "I agree to the",
+    "termsLink": "Terms & Conditions",
+    "bookAndPay": "Book & Pay €{{price}}",
+    "processing": "Processing...",
+    "errors": {
+      "selectDate": "Please select a date",
+      "selectTime": "Please select start and end time",
+      "invalidTime": "End time must be after start time",
+      "fillRequired": "Please fill all required fields",
+      "agreeTerms": "You must agree to the Terms & Conditions"
+    }
+  },
+  "location": {
+    "title": "Location & Access",
+    "address": "Address",
+    "addressValue": "Krustpils 31, Plavnieki, Riga, Latvia",
+    "accessTitle": "Access Instructions",
+    "accessDescription": "Gate code and detailed access instructions will be sent to your email after payment confirmation",
+    "directions": "Get Directions"
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Trusted by professionals and car enthusiasts",
+    "testimonial1": {
+      "text": "Perfect space for detailing work. Clean, heated, and easy access. Booked for 6 hours, extended by 2 — seamless process!",
+      "name": "Martins K.",
+      "role": "Car Detailer"
+    },
+    "testimonial2": {
+      "text": "Great garage for repairs. Convenient online payment, everything as promised. Will book again!",
+      "name": "Dmitrijs P.",
+      "role": "Mechanic"
+    },
+    "testimonial3": {
+      "text": "Ideal place for car repairs. Warm, with electricity, available 24/7. Highly recommend!",
+      "name": "Anita R.",
+      "role": "Car Owner"
+    }
+  },
+  "benefits": {
+    "title": "Why Choose Us",
+    "subtitle": "Experience the freedom and flexibility of hourly garage rental",
+    "benefit1": {
+      "title": "No Long-Term Contract",
+      "description": "Pay only for the hours you need. No monthly commitments, no long-term leases. Book for 1 hour or 1 month."
+    },
+    "benefit2": {
+      "title": "Access Anytime You Need",
+      "description": "Available 24/7. Book your slot and access the garage at your convenience. Perfect for your schedule."
+    },
+    "benefit3": {
+      "title": "Instant Booking",
+      "description": "Book online in minutes. No paperwork, no waiting. Get access code immediately after payment."
+    },
+    "benefit4": {
+      "title": "No Setup Fees",
+      "description": "Everything included in the hourly rate. Electricity, heating, and secure access. No hidden costs or surprises."
+    },
+    "benefit5": {
+      "title": "Flexible Cancellation",
+      "description": "Plans change? Cancel up to 24 hours before your booking for a full refund. No penalties."
+    },
+    "benefit6": {
+      "title": "Professional Space",
+      "description": "Clean, heated, and well-maintained garage. Perfect for car repairs, detailing, or any automotive work."
+    }
+  },
+  "trust": {
+    "title": "Trust & Safety",
+    "secure": "Secure payment by Stripe",
+    "noFees": "No hidden fees",
+    "cancellation": "Flexible cancellation policy",
+    "support": "24/7 customer support",
+    "professional": "Used by professionals & car enthusiasts"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "Can I cancel my booking?",
+      "answer": "Yes, you can cancel up to 24 hours before your booking start time for a full refund. Cancellations within 24 hours are subject to a 50% cancellation fee."
+    },
+    "q2": {
+      "question": "What if I'm late?",
+      "answer": "Your booking time starts at the scheduled time. If you're running late, please contact us as soon as possible. Late arrivals do not extend your end time."
+    },
+    "q3": {
+      "question": "Can I extend my time?",
+      "answer": "Yes, if the garage is available, you can extend your booking. Contact us or book an additional slot through the website."
+    },
+    "q4": {
+      "question": "What vehicles fit in the garage?",
+      "answer": "The garage is 3m wide, 6m long, with a 2m gate height. It's suitable for most standard cars, SUVs, and small vans."
+    },
+    "q5": {
+      "question": "Is electricity included?",
+      "answer": "Yes, 3A electricity is included in all bookings at no additional cost."
+    },
+    "q6": {
+      "question": "Is the space heated?",
+      "answer": "Yes, the garage is heated to ensure comfortable working conditions year-round."
+    },
+    "q7": {
+      "question": "How do I access the garage?",
+      "answer": "After payment confirmation, you'll receive an email with the gate code and detailed access instructions."
+    },
+    "q8": {
+      "question": "Are tools available?",
+      "answer": "The garage does not include tools. Please bring your own equipment."
+    }
+  },
+  "footer": {
+    "company": "Garage Rental Riga",
+    "contact": "Contact Us",
+    "email": "info@garagerental.lv",
+    "phone": "+371 2000 0000",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "rights": "All rights reserved"
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "lastUpdated": "Last Updated",
+    "backToHome": "Back to Home",
+    "section1": {
+      "title": "Booking & Payment",
+      "p1": "All bookings must be made through our online booking system. Payment is required at the time of booking via Stripe secure checkout.",
+      "p2": "By completing a booking, you agree to pay the total amount displayed for the selected time period.",
+      "p3": "All prices are in EUR and include VAT where applicable."
+    },
+    "section2": {
+      "title": "Cancellation & Refund Policy",
+      "important": "IMPORTANT: Please read carefully",
+      "p1": "Our cancellation policy is as follows:",
+      "fullRefund": "Full Refund:",
+      "fullRefundText": "Cancellations made 24 hours or more before the booking start time are eligible for a full refund.",
+      "noRefund": "No Refund:",
+      "noRefundText": "Bookings cancelled less than 24 hours before the start time are non-refundable. This includes no-shows.",
+      "p2": "To cancel your booking, please contact us immediately at info@garagerental.lv or +371 2000 0000."
+    },
+    "section3": {
+      "title": "Access & Notifications",
+      "p1": "After successful payment, you will receive confirmation and access details through multiple channels:",
+      "smsTitle": "SMS Text Message",
+      "smsText": "You will receive a short text message to your provided phone number containing the gate access code and key instructions.",
+      "videoTitle": "Video Walkthrough",
+      "videoText": "A link to a video walkthrough will be sent showing exactly how to find and access the garage location at Krustpils 31, Plavnieki, Riga.",
+      "p2": "Please ensure your phone number and email address are correct when booking. Access details are typically sent within 5 minutes of payment confirmation."
+    },
+    "section4": {
+      "title": "Usage Rules",
+      "intro": "By using the garage, you agree to:",
+      "rule1": "Use the garage only during your booked time slot",
+      "rule2": "Keep the garage clean and tidy during use",
+      "rule3": "Not sublease or share access with unauthorized persons",
+      "rule4": "Not store hazardous materials or illegal substances",
+      "rule5": "Secure the garage properly when leaving",
+      "rule6": "Report any damage or issues immediately"
+    },
+    "section5": {
+      "title": "Liability & Insurance",
+      "p1": "You are responsible for your vehicle and belongings while using the garage. We recommend maintaining comprehensive insurance coverage.",
+      "p2": "The garage owner is not liable for theft, damage, or loss of vehicles, tools, or personal property.",
+      "p3": "You are liable for any damage caused to the garage or its equipment during your rental period."
+    },
+    "section6": {
+      "title": "Duration & Extension",
+      "p1": "Your rental period begins at the start time specified in your booking and ends at the specified end time.",
+      "p2": "If you need to extend your booking, please contact us as soon as possible. Extensions are subject to availability and will be charged at the standard hourly rate."
+    },
+    "section7": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone"
+    },
+    "agreement": "By completing a booking, you acknowledge that you have read, understood, and agree to these Terms & Conditions."
+  },
+  "success": {
+    "title": "Booking Confirmed!",
+    "message": "Thank you for your booking. You will receive confirmation and access details shortly.",
+    "bookingId": "Booking ID",
+    "smsNotification": "SMS Text Message",
+    "smsDescription": "Access code will be sent to your phone",
+    "videoWalkthrough": "Video Walkthrough",
+    "videoDescription": "Link to location guide will be emailed",
+    "emailConfirmation": "Email Confirmation",
+    "emailDescription": "Full booking details and instructions",
+    "backToHome": "Back to Home"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "message": "We couldn't process your booking. Please try again or contact support.",
+    "retry": "Try Again",
+    "contactSupport": "Contact Support"
+  }
+}

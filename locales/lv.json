@@ -1,0 +1,283 @@
+{
+  "nav": {
+    "bookNow": "Rezervēt",
+    "howItWorks": "Kā tas darbojas",
+    "pricing": "Cenas",
+    "location": "Atrašanās vieta",
+    "contact": "Kontakti"
+  },
+  "hero": {
+    "title": "Garāžas noma pa stundām Rīgā",
+    "subtitle": "Īrē drošu, apsildītu garāžu ar elektrību pa stundām — vienkārša tiešsaistes rezervēšana",
+    "cta": "Pārbaudīt pieejamību",
+    "features": {
+      "location": "Pļavnieki, Rīga",
+      "pricing": "No €25/stunda",
+      "secure": "Droša piekļuve",
+      "electricity": "3A elektrība",
+      "heated": "Apsildīta telpa",
+      "payment": "Tiešsaistes maksājums"
+    }
+  },
+  "howItWorks": {
+    "title": "Kā tas darbojas",
+    "subtitle": "Rezervē savu garāžas vietu 3 vienkāršos soļos",
+    "step1": {
+      "title": "Izvēlies datumu un laiku",
+      "description": "Kalendārā izvēlies sev piemērotu datumu un laika intervālu"
+    },
+    "step2": {
+      "title": "Ievadi datus",
+      "description": "Norādi savu kontaktinformāciju un rezervācijas detaļas"
+    },
+    "step3": {
+      "title": "Maksā un apstiprinit",
+      "description": "Veic drošu maksājumu un saņem tūlītēju apstiprinājumu"
+    },
+    "note": "Reģistrācija nav nepieciešama"
+  },
+  "garageDetails": {
+    "title": "Garāžas specifikācijas",
+    "size": "Izmērs",
+    "sizeValue": "3m × 6m (18 m²)",
+    "gateHeight": "Vārtu augstums",
+    "gateHeightValue": "2 metri",
+    "electricity": "Elektrība",
+    "electricityValue": "3A pieejams",
+    "heating": "Apkure",
+    "heatingValue": "Jā, apsildīta telpa",
+    "location": "Atrašanās vieta",
+    "locationValue": "Krustpils iela 31, Pļavnieki, Rīga",
+    "vehicleSize": "Maksimālais transportlīdzekļa izmērs",
+    "vehicleSizeValue": "Piemērots standarta automašīnām",
+    "security": "Drošība",
+    "securityValue": "Droša piekļuve ar vārtu kodu",
+    "accessHours": "Piekļuves laiks",
+    "accessHoursValue": "24/7 pēc rezervācijas apstiprinājuma"
+  },
+  "pricing": {
+    "title": "Pārskatāmas cenas",
+    "subtitle": "Izvēlies tev piemērotu variantu",
+    "1hour": "1 stunda",
+    "3hours": "3 stundas",
+    "fullDay": "Pilna diena",
+    "3days": "3 dienas",
+    "1week": "1 nedēļa",
+    "2weeks": "2 nedēļas",
+    "1month": "1 mēnesis",
+    "save": "Ietaupi €{{amount}}",
+    "custom": "Pielāgots laiks",
+    "customDescription": "Nepieciešams cits laika periods? Mēs aprēķināsim cenu",
+    "vat": "Cenas iekļauj PVN",
+    "hours": "stundas"
+  },
+  "booking": {
+    "title": "Rezervē savu garāžu",
+    "subtitle": "Izvēlies sev piemērotu datumu un laiku",
+    "calendarTitle": "Pieejamības kalendārs",
+    "customBooking": "Pielāgota rezervācija",
+    "selectDate": "Izvēlies datumu",
+    "startTime": "Sākuma laiks",
+    "endTime": "Beigu laiks",
+    "duration": "Ilgums",
+    "totalPrice": "Kopējā cena",
+    "contactInfo": "Kontaktinformācija",
+    "name": "Pilns vārds",
+    "email": "E-pasta adrese",
+    "phone": "Tālruņa numurs",
+    "specialRequests": "Īpašie pieprasījumi (neobligāti)",
+    "termsAgreement": "Es piekrītu",
+    "termsLink": "Noteikumiem un nosacījumiem",
+    "bookAndPay": "Rezervēt un maksāt €{{price}}",
+    "processing": "Apstrādā...",
+    "errors": {
+      "selectDate": "Lūdzu, izvēlies datumu",
+      "selectTime": "Lūdzu, izvēlies sākuma un beigu laiku",
+      "invalidTime": "Beigu laikam jābūt pēc sākuma laika",
+      "fillRequired": "Lūdzu, aizpildi visus obligātos laukus",
+      "agreeTerms": "Jums jāpiekrīt Noteikumiem un nosacījumiem"
+    }
+  },
+  "location": {
+    "title": "Atrašanās vieta un piekļuve",
+    "address": "Adrese",
+    "addressValue": "Krustpils iela 31, Pļavnieki, Rīga, Latvija",
+    "accessTitle": "Piekļuves instrukcijas",
+    "accessDescription": "Vārtu kods un detalizētas piekļuves instrukcijas tiks nosūtītas uz e-pastu pēc maksājuma apstiprinājuma",
+    "directions": "Iegūt norādes"
+  },
+  "testimonials": {
+    "title": "Ko saka mūsu klienti",
+    "subtitle": "Uzticas profesionāļi un auto entuziasti",
+    "testimonial1": {
+      "text": "Perfekta vieta detalizācijas darbiem. Tīra, apsildīta un viegla piekļuve. Rezervēju 6 stundas, pagarināju par 2 — vienkāršs process!",
+      "name": "Mārtiņš K.",
+      "role": "Auto detailers"
+    },
+    "testimonial2": {
+      "text": "Lieliska garāža remontdarbiem. Ērts maksājums tiešsaistē, viss kā solīts. Rezervēšu vēl!",
+      "name": "Dmitrijs P.",
+      "role": "Mehāniķis"
+    },
+    "testimonial3": {
+      "text": "Ideāla vieta auto remontam. Silta, ar elektrību, pieejama 24/7. Iesaku!",
+      "name": "Anita R.",
+      "role": "Auto īpašniece"
+    }
+  },
+  "benefits": {
+    "title": "Kāpēc izvēlēties mūs",
+    "subtitle": "Izbaudi brīvību un elastību ar garāžas īri pa stundām",
+    "benefit1": {
+      "title": "Nav ilgtermiņa līguma",
+      "description": "Maksā tikai par stundām, kas Tev nepieciešamas. Nav mēneša saistību, nav ilgtermiņa nomas. Rezervē uz 1 stundu vai 1 mēnesi."
+    },
+    "benefit2": {
+      "title": "Piekļuve jebkurā laikā",
+      "description": "Pieejams 24/7. Rezervē savu laiku un piekļūsti garāžai tad, kad Tev ērti. Ideāli piemērots Tavam grafikam."
+    },
+    "benefit3": {
+      "title": "Tūlītēja rezervācija",
+      "description": "Rezervē tiešsaistē dažu minūšu laikā. Bez dokumentiem, bez gaidīšanas. Saņem piekļuves kodu uzreiz pēc maksājuma."
+    },
+    "benefit4": {
+      "title": "Bez iestatīšanas maksas",
+      "description": "Viss iekļauts stundas tarifā. Elektrība, apkure un droša piekļuve. Bez slēptām izmaksām vai pārsteigumiem."
+    },
+    "benefit5": {
+      "title": "Elastīga atcelšana",
+      "description": "Plāni mainījušies? Atcel līdz 24 stundām pirms rezervācijas un saņem pilnu naudas atmaksu. Bez sodiem."
+    },
+    "benefit6": {
+      "title": "Profesionāla telpa",
+      "description": "Tīra, apsildīta un labi uzturēta garāža. Ideāli piemērota auto remontam, detalizācijai vai jebkuriem auto darbiem."
+    }
+  },
+  "trust": {
+    "title": "Uzticība un drošība",
+    "secure": "Drošs maksājums ar Stripe",
+    "noFees": "Nav slēptu maksājumu",
+    "cancellation": "Elastīga atcelšanas politika",
+    "support": "24/7 klientu atbalsts",
+    "professional": "Izmanto profesionāļi un auto entuziasti"
+  },
+  "faq": {
+    "title": "Biežāk uzdotie jautājumi",
+    "q1": {
+      "question": "Vai varu atcelt rezervāciju?",
+      "answer": "Jā, vari atcelt līdz 24 stundām pirms rezervācijas sākuma un saņemt pilnu naudas atmaksu. Atcelšana 24 stundu laikā tiek aplikta ar 50% atcelšanas maksu."
+    },
+    "q2": {
+      "question": "Kas notiek, ja es nokavēju?",
+      "answer": "Rezervācijas laiks sākas plānotajā laikā. Ja kavējies, lūdzu, sazinies ar mums pēc iespējas ātrāk. Nokavēšanās nepagariniet beigu laiku."
+    },
+    "q3": {
+      "question": "Vai varu pagarināt laiku?",
+      "answer": "Jā, ja garāža ir pieejama, vari pagarināt rezervāciju. Sazinies ar mums vai rezervē papildu laiku caur vietni."
+    },
+    "q4": {
+      "question": "Kādi transportlīdzekļi ietilpst garāžā?",
+      "answer": "Garāža ir 3m plata, 6m gara, ar 2m vārtu augstumu. Tā ir piemērota lielākajai daļai standarta automašīnu, apvidus auto un maziem furgoniem."
+    },
+    "q5": {
+      "question": "Vai elektrība ir iekļauta?",
+      "answer": "Jā, 3A elektrība ir iekļauta visās rezervācijās bez papildu maksas."
+    },
+    "q6": {
+      "question": "Vai telpa ir apsildīta?",
+      "answer": "Jā, garāža ir apsildīta, lai nodrošinātu ērtas darba apstākļus visu gadu."
+    },
+    "q7": {
+      "question": "Kā es piekļūstu garāžai?",
+      "answer": "Pēc maksājuma apstiprinājuma saņemsi e-pastu ar vārtu kodu un detalizētām piekļuves instrukcijām."
+    },
+    "q8": {
+      "question": "Vai ir pieejami instrumenti?",
+      "answer": "Garāža neietver instrumentus. Lūdzu, ņem līdzi savu aprīkojumu."
+    }
+  },
+  "footer": {
+    "company": "Garāžas noma Rīgā",
+    "contact": "Sazinies ar mums",
+    "email": "info@garagerental.lv",
+    "phone": "+371 2000 0000",
+    "terms": "Noteikumi un nosacījumi",
+    "privacy": "Privātuma politika",
+    "rights": "Visas tiesības aizsargātas"
+  },
+  "terms": {
+    "title": "Noteikumi un nosacījumi",
+    "lastUpdated": "Pēdējo reizi atjaunināts",
+    "backToHome": "Atpakaļ uz sākumu",
+    "section1": {
+      "title": "Rezervācija un maksājums",
+      "p1": "Visas rezervācijas jāveic caur mūsu tiešsaistes rezervācijas sistēmu. Maksājums jāveic rezervācijas brīdī, izmantojot Stripe drošo norēķinu sistēmu.",
+      "p2": "Veicot rezervāciju, jūs piekrītat samaksāt kopējo summu, kas norādīta izvēlētajam laika periodam.",
+      "p3": "Visas cenas ir EUR un iekļauj PVN, ja piemērojams."
+    },
+    "section2": {
+      "title": "Atcelšanas un atmaksas politika",
+      "important": "SVARĪGI: Lūdzu, rūpīgi izlasiet",
+      "p1": "Mūsu atcelšanas politika ir šāda:",
+      "fullRefund": "Pilna atmaksa:",
+      "fullRefundText": "Atcelšana 24 stundas vai vairāk pirms rezervācijas sākuma laika ir tiesīga uz pilnu naudas atmaksu.",
+      "noRefund": "Nav atmaksas:",
+      "noRefundText": "Rezervācijas, kas atceltas mazāk nekā 24 stundas pirms sākuma laika, nav atmaksājamas. Tas iekļauj arī neierašanos.",
+      "p2": "Lai atceltu rezervāciju, lūdzu, nekavējoties sazinieties ar mums pa e-pastu info@garagerental.lv vai tālruni +371 2000 0000."
+    },
+    "section3": {
+      "title": "Piekļuve un paziņojumi",
+      "p1": "Pēc veiksmīga maksājuma saņemsiet apstiprinājumu un piekļuves detaļas vairākos veidos:",
+      "smsTitle": "SMS īsziņa",
+      "smsText": "Saņemsiet īsu teksta ziņojumu uz norādīto tālruņa numuru ar vārtu piekļuves kodu un galvenajām instrukcijām.",
+      "videoTitle": "Video pamācība",
+      "videoText": "Tiks nosūtīta saite uz video pamācību, kas parāda, kā atrast un piekļūt garāžai adresē Krustpils iela 31, Pļavnieki, Rīga.",
+      "p2": "Lūdzu, pārliecinieties, ka jūsu tālruņa numurs un e-pasta adrese ir pareizi, veicot rezervāciju. Piekļuves detaļas parasti tiek nosūtītas 5 minūšu laikā pēc maksājuma apstiprinājuma."
+    },
+    "section4": {
+      "title": "Lietošanas noteikumi",
+      "intro": "Izmantojot garāžu, jūs piekrītat:",
+      "rule1": "Izmantot garāžu tikai rezervētajā laika periodā",
+      "rule2": "Uzturēt garāžu tīru un kārtīgu lietošanas laikā",
+      "rule3": "Neapakšnomāt vai nedalīties ar piekļuvi ar neatļautām personām",
+      "rule4": "Neglabāt bīstamus materiālus vai nelikumīgas vielas",
+      "rule5": "Pareizi aizslēgt garāžu, aizejot",
+      "rule6": "Nekavējoties ziņot par bojājumiem vai problēmām"
+    },
+    "section5": {
+      "title": "Atbildība un apdrošināšana",
+      "p1": "Jūs esat atbildīgs par savu transportlīdzekli un mantām, izmantojot garāžu. Iesakām uzturēt visaptverošu apdrošināšanas segumu.",
+      "p2": "Garāžas īpašnieks nav atbildīgs par zādzību, bojājumiem vai zaudējumiem transportlīdzekļiem, instrumentiem vai personīgajām mantām.",
+      "p3": "Jūs esat atbildīgs par jebkādiem bojājumiem, kas radušies garāžai vai tās aprīkojumam jūsu nomas perioda laikā."
+    },
+    "section6": {
+      "title": "Ilgums un pagarināšana",
+      "p1": "Jūsu nomas periods sākas rezervācijā norādītajā sākuma laikā un beidzas norādītajā beigu laikā.",
+      "p2": "Ja nepieciešams pagarināt rezervāciju, lūdzu, sazinieties ar mums pēc iespējas ātrāk. Pagarinājumi ir atkarīgi no pieejamības un tiks iekasēti pēc standarta stundas tarifa."
+    },
+    "section7": {
+      "title": "Kontaktinformācija",
+      "email": "E-pasts",
+      "phone": "Tālrunis"
+    },
+    "agreement": "Veicot rezervāciju, jūs apstiprināt, ka esat izlasījis, sapratis un piekrītat šiem Noteikumiem un nosacījumiem."
+  },
+  "success": {
+    "title": "Rezervācija apstiprināta!",
+    "message": "Paldies par rezervāciju. Drīzumā saņemsi apstiprinājumu un piekļuves detaļas.",
+    "bookingId": "Rezervācijas ID",
+    "smsNotification": "SMS īsziņa",
+    "smsDescription": "Piekļuves kods tiks nosūtīts uz tavu tālruni",
+    "videoWalkthrough": "Video pamācība",
+    "videoDescription": "Saite uz atrašanās vietas ceļvedi tiks nosūtīta e-pastā",
+    "emailConfirmation": "E-pasta apstiprinājums",
+    "emailDescription": "Pilnas rezervācijas detaļas un instrukcijas",
+    "backToHome": "Atpakaļ uz sākumu"
+  },
+  "error": {
+    "title": "Kaut kas nogāja greizi",
+    "message": "Nevarējām apstrādāt rezervāciju. Lūdzu, mēģini vēlreiz vai sazinies ar atbalstu.",
+    "retry": "Mēģināt vēlreiz",
+    "contactSupport": "Sazināties ar atbalstu"
+  }
+}
