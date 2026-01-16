@@ -7,12 +7,12 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Hourly Garage Rental in Riga",
-    "subtitle": "Rent a secure, heated garage with electricity by the hour — simple online booking",
+    "title": "Garage Rental in Riga",
+    "subtitle": "Rent a secure, heated garage with electricity by the day — simple online booking",
     "cta": "Check Availability",
     "features": {
       "location": "Plavnieki, Riga",
-      "pricing": "From €25/hour",
+      "pricing": "From €35/day",
       "secure": "Secure Access",
       "electricity": "3A Electricity",
       "heated": "Heated Space",
@@ -58,18 +58,16 @@
   "pricing": {
     "title": "Transparent Pricing",
     "subtitle": "Choose the option that fits your needs",
-    "1hour": "1 hour",
-    "3hours": "3 hours",
-    "fullDay": "Full day",
+    "1day": "1 day",
     "3days": "3 days",
     "1week": "1 week",
-    "2weeks": "2 weeks",
     "1month": "1 month",
-    "save": "Save €{{amount}}",
+    "day": "day",
+    "days": "days",
+    "bestValue": "Best Value",
     "custom": "Custom duration",
-    "customDescription": "Need a different time frame? We'll calculate the price for you",
+    "customDescription": "Need a different period? We'll calculate the price for you",
     "vat": "Prices include VAT",
-    "hours": "hours",
     "mostPopular": "MOST POPULAR",
     "heatedSpace": "Heated Space",
     "electricityIncluded": "Electricity Included",
@@ -78,15 +76,15 @@
   },
   "booking": {
     "title": "Book Your Garage",
-    "subtitle": "Select your preferred date and time",
+    "subtitle": "Select your rental period",
     "calendarTitle": "Availability Calendar",
     "customBooking": "Custom Booking",
     "selectLocation": "Select Location",
     "bookNow": "Book Now",
     "premiumPricing": "Premium location pricing applied",
-    "selectDate": "Select Date",
-    "startTime": "Start Time",
-    "endTime": "End Time",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "quickSelect": "Quick Select Duration",
     "duration": "Duration",
     "totalPrice": "Total Price",
     "contactInfo": "Contact Information",
@@ -99,9 +97,8 @@
     "bookAndPay": "Book & Pay €{{price}}",
     "processing": "Processing...",
     "errors": {
-      "selectDate": "Please select a date",
-      "selectTime": "Please select start and end time",
-      "invalidTime": "End time must be after start time",
+      "selectDate": "Please select start and end dates",
+      "invalidDate": "End date must be after start date",
       "fillRequired": "Please fill all required fields",
       "agreeTerms": "You must agree to the Terms & Conditions"
     }
@@ -146,11 +143,11 @@
   },
   "benefits": {
     "title": "Why Choose Us",
-    "subtitle": "Experience the freedom and flexibility of hourly garage rental",
+    "subtitle": "Experience the freedom and flexibility of daily garage rental",
     "startBookingNow": "Start Booking Now",
     "benefit1": {
       "title": "No Long-Term Contract",
-      "description": "Pay only for the hours you need. No monthly commitments, no long-term leases. Book for 1 hour or 1 month."
+      "description": "Pay only for the days you need. No monthly commitments, no long-term leases. Book for 1 day or 1 month."
     },
     "benefit2": {
       "title": "Access Anytime You Need",
@@ -162,7 +159,7 @@
     },
     "benefit4": {
       "title": "No Setup Fees",
-      "description": "Everything included in the hourly rate. Electricity, heating, and secure access. No hidden costs or surprises."
+      "description": "Everything included in the daily rate. Electricity, heating, and secure access. No hidden costs or surprises."
     },
     "benefit5": {
       "title": "Flexible Cancellation",

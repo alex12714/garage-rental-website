@@ -7,12 +7,12 @@
     "contact": "Kontakti"
   },
   "hero": {
-    "title": "Garāžas noma pa stundām Rīgā",
-    "subtitle": "Īrē drošu, apsildītu garāžu ar elektrību pa stundām — vienkārša tiešsaistes rezervēšana",
+    "title": "Garāžas noma Rīgā",
+    "subtitle": "Īrē drošu, apsildītu garāžu ar elektrību pa dienām — vienkārša tiešsaistes rezervēšana",
     "cta": "Pārbaudīt pieejamību",
     "features": {
       "location": "Pļavnieki, Rīga",
-      "pricing": "No €25/stunda",
+      "pricing": "No €35/diena",
       "secure": "Droša piekļuve",
       "electricity": "3A elektrība",
       "heated": "Apsildīta telpa",
@@ -58,18 +58,16 @@
   "pricing": {
     "title": "Pārskatāmas cenas",
     "subtitle": "Izvēlies tev piemērotu variantu",
-    "1hour": "1 stunda",
-    "3hours": "3 stundas",
-    "fullDay": "Pilna diena",
+    "1day": "1 diena",
     "3days": "3 dienas",
     "1week": "1 nedēļa",
-    "2weeks": "2 nedēļas",
     "1month": "1 mēnesis",
-    "save": "Ietaupi €{{amount}}",
-    "custom": "Pielāgots laiks",
-    "customDescription": "Nepieciešams cits laika periods? Mēs aprēķināsim cenu",
+    "day": "diena",
+    "days": "dienas",
+    "bestValue": "Labākā cena",
+    "custom": "Pielāgots periods",
+    "customDescription": "Nepieciešams cits periods? Mēs aprēķināsim cenu",
     "vat": "Cenas iekļauj PVN",
-    "hours": "stundas",
     "mostPopular": "VISPOPULĀRĀKAIS",
     "heatedSpace": "Apsildīta telpa",
     "electricityIncluded": "Elektrība iekļauta",
@@ -78,15 +76,15 @@
   },
   "booking": {
     "title": "Rezervē savu garāžu",
-    "subtitle": "Izvēlies sev piemērotu datumu un laiku",
+    "subtitle": "Izvēlies nomas periodu",
     "calendarTitle": "Pieejamības kalendārs",
     "customBooking": "Pielāgota rezervācija",
     "selectLocation": "Izvēlies atrašanās vietu",
     "bookNow": "Rezervēt tagad",
     "premiumPricing": "Piemērota premium atrašanās vietas cena",
-    "selectDate": "Izvēlies datumu",
-    "startTime": "Sākuma laiks",
-    "endTime": "Beigu laiks",
+    "startDate": "Sākuma datums",
+    "endDate": "Beigu datums",
+    "quickSelect": "Ātrā ilguma izvēle",
     "duration": "Ilgums",
     "totalPrice": "Kopējā cena",
     "contactInfo": "Kontaktinformācija",
@@ -99,9 +97,8 @@
     "bookAndPay": "Rezervēt un maksāt €{{price}}",
     "processing": "Apstrādā...",
     "errors": {
-      "selectDate": "Lūdzu, izvēlies datumu",
-      "selectTime": "Lūdzu, izvēlies sākuma un beigu laiku",
-      "invalidTime": "Beigu laikam jābūt pēc sākuma laika",
+      "selectDate": "Lūdzu, izvēlies sākuma un beigu datumu",
+      "invalidDate": "Beigu datumam jābūt pēc sākuma datuma",
       "fillRequired": "Lūdzu, aizpildi visus obligātos laukus",
       "agreeTerms": "Jums jāpiekrīt Noteikumiem un nosacījumiem"
     }
@@ -146,11 +143,11 @@
   },
   "benefits": {
     "title": "Kāpēc izvēlēties mūs",
-    "subtitle": "Izbaudi brīvību un elastību ar garāžas īri pa stundām",
+    "subtitle": "Izbaudi brīvību un elastību ar garāžas īri pa dienām",
     "startBookingNow": "Sākt rezervāciju tagad",
     "benefit1": {
       "title": "Nav ilgtermiņa līguma",
-      "description": "Maksā tikai par stundām, kas Tev nepieciešamas. Nav mēneša saistību, nav ilgtermiņa nomas. Rezervē uz 1 stundu vai 1 mēnesi."
+      "description": "Maksā tikai par dienām, kas Tev nepieciešamas. Nav mēneša saistību, nav ilgtermiņa nomas. Rezervē uz 1 dienu vai 1 mēnesi."
     },
     "benefit2": {
       "title": "Piekļuve jebkurā laikā",
@@ -162,7 +159,7 @@
     },
     "benefit4": {
       "title": "Bez iestatīšanas maksas",
-      "description": "Viss iekļauts stundas tarifā. Elektrība, apkure un droša piekļuve. Bez slēptām izmaksām vai pārsteigumiem."
+      "description": "Viss iekļauts dienas tarifā. Elektrība, apkure un droša piekļuve. Bez slēptām izmaksām vai pārsteigumiem."
     },
     "benefit5": {
       "title": "Elastīga atcelšana",

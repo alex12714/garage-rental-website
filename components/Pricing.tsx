@@ -45,7 +45,7 @@ export default function Pricing() {
                   {t(`pricing.${option.duration}`)}
                 </h3>
                 <p className="text-xs text-gray-500">
-                  {option.hours} {t('pricing.hours')}
+                  {option.days} {option.days === 1 ? t('pricing.day') : t('pricing.days')}
                 </p>
               </div>
 
@@ -54,13 +54,18 @@ export default function Pricing() {
                 <div className="text-4xl font-bold text-primary-600">
                   €{option.price}
                 </div>
+                {option.pricePerDay && (
+                  <p className="text-xs text-gray-500 mt-1">
+                    €{option.pricePerDay.toFixed(2)}/{t('pricing.day')}
+                  </p>
+                )}
               </div>
 
-              {/* Savings */}
-              {option.savings && (
+              {/* Best Value for longer durations */}
+              {option.days >= 7 && (
                 <div className="text-center">
                   <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                    {t('pricing.save', { amount: option.savings })}
+                    {t('pricing.bestValue')}
                   </span>
                 </div>
               )}

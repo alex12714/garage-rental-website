@@ -25,27 +25,21 @@ export default function IntegratedBooking() {
     return tomorrow.toISOString().split('T')[0];
   };
 
-  const [startTime, setStartTime] = useState('09:00');
-  const [endTime, setEndTime] = useState('12:00');
-  const [selectedDate, setSelectedDate] = useState(getTomorrowDate());
+  // Get day after tomorrow for default end date
+  const getDayAfterTomorrow = () => {
+    const dayAfter = new Date();
+    dayAfter.setDate(dayAfter.getDate() + 2);
+    return dayAfter.toISOString().split('T')[0];
+  };
+
+  const [startDate, setStartDate] = useState(getTomorrowDate());
+  const [endDate, setEndDate] = useState(getDayAfterTomorrow());
   const [customerName, setCustomerName] = useState('');
   const [customerEmail, setCustomerEmail] = useState('');
   const [customerPhone, setCustomerPhone] = useState('');
   const [specialRequests, setSpecialRequests] = useState('');
   const [agreeToTerms, setAgreeToTerms] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
-
-  // Generate top-of-hour options (00:00 to 23:00)
-  const generateHourOptions = () => {
-    const options = [];
-    for (let i = 0; i < 24; i++) {
-      const hour = i.toString().padStart(2, '0');
-      options.push(`${hour}:00`);
-    }
-    return options;
-  };
-
-  const hourOptions = generateHourOptions();
 
   const handleLocationChange = (location: Location) => {
     setSelectedLocation(location);
@@ -57,10 +51,10 @@ export default function IntegratedBooking() {
   };
 
   const calculateBookingPrice = () => {
-    if (!selectedDate || !startTime || !endTime) return 0;
+    if (!startDate || !endDate) return 0;
 
-    const start = new Date(`${selectedDate}T${startTime}`);
-    const end = new Date(`${selectedDate}T${endTime}`);
+    const start = new Date(startDate);
+    const end = new Date(endDate);
 
     if (end <= start) return 0;
 
@@ -68,10 +62,10 @@ export default function IntegratedBooking() {
   };
 
   const calculateBookingDuration = () => {
-    if (!selectedDate || !startTime || !endTime) return null;
+    if (!startDate || !endDate) return null;
 
-    const start = new Date(`${selectedDate}T${startTime}`);
-    const end = new Date(`${selectedDate}T${endTime}`);
+    const start = new Date(startDate);
+    const end = new Date(endDate);
 
     if (end <= start) return null;
 
@@ -80,8 +74,8 @@ export default function IntegratedBooking() {
 
   const handleBooking = async () => {
     // Validation
-    if (!selectedDate || !startTime || !endTime) {
-      alert(t('booking.errors.selectTime'));
+    if (!startDate || !endDate) {
+      alert(t('booking.errors.selectDate'));
       return;
     }
 
@@ -95,11 +89,11 @@ export default function IntegratedBooking() {
       return;
     }
 
-    const start = new Date(`${selectedDate}T${startTime}`);
-    const end = new Date(`${selectedDate}T${endTime}`);
+    const start = new Date(startDate);
+    const end = new Date(endDate);
 
     if (end <= start) {
-      alert(t('booking.errors.invalidTime'));
+      alert(t('booking.errors.invalidDate'));
       return;
     }
 
@@ -107,6 +101,7 @@ export default function IntegratedBooking() {
 
     try {
       const price = calculatePrice(start, end, selectedLocation.id);
+      const durationInfo = calculateDuration(start, end);
 
       // Create Stripe checkout session
       const response = await fetch('/api/checkout', {
@@ -122,6 +117,7 @@ export default function IntegratedBooking() {
           customerPhone,
           specialRequests,
           amount: price,
+          durationDays: durationInfo.days,
           locationId: selectedLocation.id,
           locationName: i18n.language === 'en' ? selectedLocation.nameEn : selectedLocation.name,
           language: localStorage.getItem('i18nextLng') || 'en',
@@ -349,55 +345,78 @@ export default function IntegratedBooking() {
             </h3>
 
             <div className="space-y-6">
-              {/* Date Picker */}
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  📅 {t('booking.selectDate')} *
-                </label>
-                <input
-                  type="date"
-                  value={selectedDate}
-                  onChange={(e) => setSelectedDate(e.target.value)}
-                  min={new Date().toISOString().split('T')[0]}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-lg"
-                />
-              </div>
-
-              {/* Time Selection */}
+              {/* Date Range Selection */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    🕐 {t('booking.startTime')} *
+                    📅 {t('booking.startDate')} *
                   </label>
-                  <select
-                    value={startTime}
-                    onChange={(e) => setStartTime(e.target.value)}
+                  <input
+                    type="date"
+                    value={startDate}
+                    onChange={(e) => {
+                      setStartDate(e.target.value);
+                      // Auto-adjust end date if it's before or equal to start date
+                      if (e.target.value >= endDate) {
+                        const newEnd = new Date(e.target.value);
+                        newEnd.setDate(newEnd.getDate() + 1);
+                        setEndDate(newEnd.toISOString().split('T')[0]);
+                      }
+                    }}
+                    min={new Date().toISOString().split('T')[0]}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-lg"
-                  >
-                    <option value="">Select time</option>
-                    {hourOptions.map((hour) => (
-                      <option key={`start-${hour}`} value={hour}>
-                        {hour}
-                      </option>
-                    ))}
-                  </select>
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    🕐 {t('booking.endTime')} *
+                    📅 {t('booking.endDate')} *
                   </label>
-                  <select
-                    value={endTime}
-                    onChange={(e) => setEndTime(e.target.value)}
+                  <input
+                    type="date"
+                    value={endDate}
+                    onChange={(e) => setEndDate(e.target.value)}
+                    min={startDate || new Date().toISOString().split('T')[0]}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-lg"
-                  >
-                    <option value="">Select time</option>
-                    {hourOptions.map((hour) => (
-                      <option key={`end-${hour}`} value={hour}>
-                        {hour}
-                      </option>
-                    ))}
-                  </select>
+                  />
+                </div>
+              </div>
+
+              {/* Quick Duration Buttons */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  ⏱️ {t('booking.quickSelect')}
+                </label>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                  {[
+                    { days: 1, label: t('pricing.1day'), price: 35 },
+                    { days: 3, label: t('pricing.3days'), price: 50 },
+                    { days: 7, label: t('pricing.1week'), price: 70 },
+                    { days: 30, label: t('pricing.1month'), price: 150 },
+                  ].map((option) => {
+                    const start = new Date(startDate);
+                    const end = new Date(startDate);
+                    end.setDate(end.getDate() + option.days);
+                    const isSelected = endDate === end.toISOString().split('T')[0];
+                    return (
+                      <button
+                        key={option.days}
+                        type="button"
+                        onClick={() => {
+                          const newEnd = new Date(startDate);
+                          newEnd.setDate(newEnd.getDate() + option.days);
+                          setEndDate(newEnd.toISOString().split('T')[0]);
+                        }}
+                        className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
+                          isSelected
+                            ? 'bg-primary-600 text-white shadow-md'
+                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        }`}
+                      >
+                        {option.label}
+                        <span className="block text-xs opacity-75">€{option.price}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 

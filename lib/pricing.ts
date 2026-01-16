@@ -1,68 +1,51 @@
 export interface PricingOption {
   duration: string;
-  hours: number;
+  days: number;
   price: number;
-  savings?: number;
+  pricePerDay?: number;
   popular?: boolean;
 }
 
 export const pricingOptions: PricingOption[] = [
   {
-    duration: '1hour',
-    hours: 1,
-    price: 25,
-  },
-  {
-    duration: '3hours',
-    hours: 3,
+    duration: '1day',
+    days: 1,
     price: 35,
-    savings: 40,
-    popular: true,
-  },
-  {
-    duration: 'fullDay',
-    hours: 8,
-    price: 60,
-    savings: 140,
+    pricePerDay: 35,
   },
   {
     duration: '3days',
-    hours: 72,
-    price: 150,
-    savings: 210,
+    days: 3,
+    price: 50,
+    pricePerDay: 16.67,
+    popular: true,
   },
   {
     duration: '1week',
-    hours: 168,
-    price: 300,
-    savings: 540,
-  },
-  {
-    duration: '2weeks',
-    hours: 336,
-    price: 500,
-    savings: 1180,
+    days: 7,
+    price: 70,
+    pricePerDay: 10,
   },
   {
     duration: '1month',
-    hours: 720,
-    price: 800,
-    savings: 2800,
+    days: 30,
+    price: 150,
+    pricePerDay: 5,
   },
 ];
 
 export function calculatePrice(
-  startTime: Date,
-  endTime: Date,
+  startDate: Date,
+  endDate: Date,
   locationId: string = 'riga'
 ): number {
-  const diffMs = endTime.getTime() - startTime.getTime();
-  const hours = diffMs / (1000 * 60 * 60);
+  const diffMs = endDate.getTime() - startDate.getTime();
+  const days = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+
+  if (days <= 0) return 0;
 
   // Find matching pricing option
-  const matchingOption = pricingOptions.find(
-    option => Math.abs(option.hours - hours) < 0.5
-  );
+  const matchingOption = pricingOptions.find(option => option.days === days);
 
   let basePrice = 0;
 
@@ -70,16 +53,14 @@ export function calculatePrice(
     basePrice = matchingOption.price;
   } else {
     // Custom calculation for non-standard durations
-    if (hours <= 1) basePrice = 25;
-    else if (hours <= 3) basePrice = 35;
-    else if (hours <= 8) basePrice = 60;
-    else if (hours <= 72) basePrice = 150;
-    else if (hours <= 168) basePrice = 300;
-    else if (hours <= 336) basePrice = 500;
-    else if (hours <= 720) basePrice = 800;
+    if (days === 1) basePrice = 35;
+    else if (days <= 3) basePrice = 50;
+    else if (days <= 7) basePrice = 70;
+    else if (days <= 30) basePrice = 150;
     else {
-      // For very long durations, calculate based on hourly rate
-      basePrice = Math.ceil(hours * 5);
+      // For very long durations, calculate based on monthly rate
+      const months = Math.ceil(days / 30);
+      basePrice = months * 150;
     }
   }
 
@@ -89,24 +70,29 @@ export function calculatePrice(
   return basePrice * multiplier;
 }
 
-export function calculateDuration(startTime: Date, endTime: Date): {
-  hours: number;
+export function calculateDuration(startDate: Date, endDate: Date): {
   days: number;
   displayText: string;
 } {
-  const diffMs = endTime.getTime() - startTime.getTime();
-  const hours = Math.round((diffMs / (1000 * 60 * 60)) * 10) / 10;
-  const days = Math.floor(hours / 24);
+  const diffMs = endDate.getTime() - startDate.getTime();
+  const days = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
 
   let displayText = '';
-  if (days > 0) {
-    displayText = `${days} day${days > 1 ? 's' : ''} ${hours % 24 > 0 ? `${hours % 24} hours` : ''}`.trim();
+  if (days === 1) {
+    displayText = '1 day';
+  } else if (days === 7) {
+    displayText = '1 week';
+  } else if (days === 30) {
+    displayText = '1 month';
+  } else if (days > 30) {
+    const months = Math.floor(days / 30);
+    const remainingDays = days % 30;
+    displayText = `${months} month${months > 1 ? 's' : ''}${remainingDays > 0 ? ` ${remainingDays} day${remainingDays > 1 ? 's' : ''}` : ''}`;
   } else {
-    displayText = `${hours} hour${hours !== 1 ? 's' : ''}`;
+    displayText = `${days} day${days > 1 ? 's' : ''}`;
   }
 
   return {
-    hours,
     days,
     displayText,
   };

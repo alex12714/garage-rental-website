@@ -94,7 +94,7 @@ export default function PricingSlider() {
                     {t(`pricing.${currentOption.duration}`)}
                   </h3>
                   <p className="text-sm text-gray-500">
-                    {currentOption.hours} {t('pricing.hours')}
+                    {currentOption.days} {currentOption.days === 1 ? t('pricing.day') : t('pricing.days')}
                   </p>
                 </div>
 
@@ -103,16 +103,18 @@ export default function PricingSlider() {
                   <div className="text-6xl font-bold text-primary-600 mb-2">
                     €{currentOption.price}
                   </div>
-                  <div className="text-sm text-gray-500">
-                    €{(currentOption.price / currentOption.hours).toFixed(2)}/hour
-                  </div>
+                  {currentOption.pricePerDay && (
+                    <div className="text-sm text-gray-500">
+                      €{currentOption.pricePerDay.toFixed(2)}/{t('pricing.day')}
+                    </div>
+                  )}
                 </div>
 
-                {/* Savings */}
-                {currentOption.savings && (
+                {/* Best Value Badge for longer durations */}
+                {currentOption.days >= 7 && (
                   <div className="text-center mb-6">
                     <span className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-base font-semibold">
-                      💰 {t('pricing.save', { amount: currentOption.savings })}
+                      💰 {t('pricing.bestValue')}
                     </span>
                   </div>
                 )}
