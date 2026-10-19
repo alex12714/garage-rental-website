@@ -32,7 +32,7 @@ export default function GarageDetails() {
           <div className="space-y-4">
             <div className="relative h-64 sm:h-80 bg-gray-200 rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/images/garage-1.png"
+                src="/images/garage-workshop-3.jpg"
                 alt="Garage interior - heated space with electricity"
                 fill
                 className="object-cover"
@@ -42,7 +42,7 @@ export default function GarageDetails() {
             </div>
             <div className="relative h-64 sm:h-80 bg-gray-200 rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/images/garage-2.png"
+                src="/images/garage-workshop-4.jpg"
                 alt="Garage exterior - secure access in Plavnieki, Riga"
                 fill
                 className="object-cover"

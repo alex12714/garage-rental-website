@@ -72,9 +72,19 @@
     "heatedSpace": "Heated Space",
     "electricityIncluded": "Electricity Included",
     "secureAccess": "Secure Access",
-    "access24x7": "24/7 Access"
+    "access24x7": "24/7 Access",
+    "1hour": "1 hour",
+    "3hours": "3 hours",
+    "hour": "hour",
+    "hours": "hours"
   },
   "booking": {
+    "availability": "Availability",
+    "available": "Available",
+    "booked": "Booked",
+    "bookedDate": "This date is booked",
+    "availableDate": "This date is available",
+    "calendarNote": "Calendar shows next 5 weeks. Bookings available up to 1 month ahead.",
     "title": "Book Your Garage",
     "subtitle": "Select your rental period",
     "calendarTitle": "Availability Calendar",
@@ -100,8 +110,14 @@
       "selectDate": "Please select start and end dates",
       "invalidDate": "End date must be after start date",
       "fillRequired": "Please fill all required fields",
-      "agreeTerms": "You must agree to the Terms & Conditions"
-    }
+      "agreeTerms": "You must agree to the Terms & Conditions",
+      "dateUnavailable": "Selected dates overlap with existing bookings",
+      "chooseDifferentDates": "Please choose different dates or check the availability calendar."
+    },
+    "depositNow": "Deposit to Pay Now",
+    "remainingBalance": "Remaining balance (due before rental)",
+    "depositNote": "Full payment is required before the rental begins. This €10 deposit reserves your time slot.",
+    "payDeposit": "Pay €10 Deposit to Reserve"
   },
   "location": {
     "title": "Location & Access",
@@ -120,7 +136,8 @@
     "featureOnlinePayment": "Online Payment",
     "featureInstantBooking": "Instant Booking",
     "heatedYes": "Yes, heated",
-    "heatedNo": "No heating"
+    "heatedNo": "No heating",
+    "photo": "Photo"
   },
   "testimonials": {
     "title": "What Our Customers Say",
@@ -206,7 +223,7 @@
     },
     "q7": {
       "question": "How do I access the garage?",
-      "answer": "After payment confirmation, you'll receive an email with the gate code and detailed access instructions."
+      "answer": "After payment, you'll sign a rental agreement, then we'll call you to arrange a meeting time at the garage gate where you'll receive your key."
     },
     "q8": {
       "question": "Are tools available?",
@@ -217,7 +234,7 @@
     "company": "Garage Rental Riga",
     "contact": "Contact Us",
     "email": "info@garagerental.lv",
-    "phone": "+371 2000 0000",
+    "phone": "+371 22532304",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
     "rights": "All rights reserved",
@@ -241,16 +258,18 @@
       "fullRefundText": "Cancellations made 24 hours or more before the booking start time are eligible for a full refund.",
       "noRefund": "No Refund:",
       "noRefundText": "Bookings cancelled less than 24 hours before the start time are non-refundable. This includes no-shows.",
-      "p2": "To cancel your booking, please contact us immediately at info@garagerental.lv or +371 2000 0000."
+      "p2": "To cancel your booking, please contact us immediately at info@garagerental.lv or +371 22532304."
     },
     "section3": {
-      "title": "Access & Notifications",
-      "p1": "After successful payment, you will receive confirmation and access details through multiple channels:",
-      "smsTitle": "SMS Text Message",
-      "smsText": "You will receive a short text message to your provided phone number containing the gate access code and key instructions.",
-      "videoTitle": "Video Walkthrough",
-      "videoText": "A link to a video walkthrough will be sent showing exactly how to find and access the garage location at Krustpils 31, Plavnieki, Riga.",
-      "p2": "Please ensure your phone number and email address are correct when booking. Access details are typically sent within 5 minutes of payment confirmation."
+      "title": "Access & Key Handover",
+      "p1": "After successful payment, you will receive access through the following process:",
+      "agreementTitle": "Rental Agreement",
+      "agreementText": "You will receive a rental agreement via email that must be signed electronically before key handover.",
+      "callTitle": "Phone Call",
+      "callText": "Our representative will call you to arrange a convenient meeting time at the garage location.",
+      "meetingTitle": "Key Handover",
+      "meetingText": "Meet our representative at the agreed time at the garage gate (Krustpils 31, Plavnieki, Riga) to receive your key.",
+      "p2": "Please ensure your phone number and email address are correct when booking. We will contact you within 2 hours during business hours."
     },
     "section4": {
       "title": "Usage Rules",
@@ -282,15 +301,21 @@
   },
   "success": {
     "title": "Booking Confirmed!",
-    "message": "Thank you for your booking. You will receive confirmation and access details shortly.",
+    "message": "Thank you for your booking. Please complete the following steps to receive your garage key.",
     "bookingId": "Booking ID",
-    "smsNotification": "SMS Text Message",
-    "smsDescription": "Access code will be sent to your phone",
-    "videoWalkthrough": "Video Walkthrough",
-    "videoDescription": "Link to location guide will be emailed",
-    "emailConfirmation": "Email Confirmation",
-    "emailDescription": "Full booking details and instructions",
-    "backToHome": "Back to Home"
+    "step1Agreement": "Sign Rental Agreement",
+    "step1Description": "You will receive a rental agreement via email. Please review and sign it electronically.",
+    "step2Call": "Wait for Our Call",
+    "step2Description": "Our representative will call you to arrange a convenient meeting time at the garage.",
+    "step3Meeting": "Meet at the Gate",
+    "step3Description": "Meet our representative at the agreed time at the garage gate (Krustpils 31, Plavnieki) to receive your key.",
+    "importantNote": "Important",
+    "importantDescription": "Please ensure your phone number is correct and available. We will contact you within 2 hours during business hours.",
+    "backToHome": "Back to Home",
+    "depositPaid": "Deposit Paid",
+    "depositAmount": "€10 deposit paid",
+    "remainingPayment": "Remaining Payment",
+    "remainingDescription": "The remaining balance will be collected before your rental begins."
   },
   "error": {
     "title": "Something went wrong",

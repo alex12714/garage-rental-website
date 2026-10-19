@@ -1,12 +1,26 @@
 export interface PricingOption {
   duration: string;
-  days: number;
+  days?: number;
+  hours?: number;
   price: number;
+  pricePerHour?: number;
   pricePerDay?: number;
   popular?: boolean;
 }
 
 export const pricingOptions: PricingOption[] = [
+  {
+    duration: '1hour',
+    hours: 1,
+    price: 10,
+    pricePerHour: 10,
+  },
+  {
+    duration: '3hours',
+    hours: 3,
+    price: 25,
+    pricePerHour: 8.33,
+  },
   {
     duration: '1day',
     days: 1,
@@ -40,19 +54,26 @@ export function calculatePrice(
   locationId: string = 'riga'
 ): number {
   const diffMs = endDate.getTime() - startDate.getTime();
+  const diffHours = diffMs / (1000 * 60 * 60);
   const days = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
 
-  if (days <= 0) return 0;
-
-  // Find matching pricing option
-  const matchingOption = pricingOptions.find(option => option.days === days);
+  if (diffMs <= 0) return 0;
 
   let basePrice = 0;
 
-  if (matchingOption) {
-    basePrice = matchingOption.price;
+  // Check for hourly bookings (less than 24 hours)
+  if (diffHours <= 24) {
+    if (diffHours <= 1) {
+      basePrice = 10; // 1 hour
+    } else if (diffHours <= 3) {
+      basePrice = 25; // 3 hours
+    } else if (diffHours <= 6) {
+      basePrice = 30; // up to 6 hours
+    } else {
+      basePrice = 35; // full day
+    }
   } else {
-    // Custom calculation for non-standard durations
+    // Daily bookings
     if (days === 1) basePrice = 35;
     else if (days <= 3) basePrice = 50;
     else if (days <= 7) basePrice = 70;
@@ -72,28 +93,43 @@ export function calculatePrice(
 
 export function calculateDuration(startDate: Date, endDate: Date): {
   days: number;
+  hours: number;
   displayText: string;
 } {
   const diffMs = endDate.getTime() - startDate.getTime();
-  const days = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+  const totalHours = diffMs / (1000 * 60 * 60);
+  const days = Math.floor(totalHours / 24);
+  const hours = Math.round(totalHours % 24);
 
   let displayText = '';
-  if (days === 1) {
+  
+  if (totalHours < 24) {
+    // Show only hours for bookings less than a day
+    const roundedHours = Math.round(totalHours);
+    if (roundedHours === 1) {
+      displayText = '1 hour';
+    } else {
+      displayText = `${roundedHours} hours`;
+    }
+  } else if (days === 1 && hours === 0) {
     displayText = '1 day';
-  } else if (days === 7) {
+  } else if (days === 7 && hours === 0) {
     displayText = '1 week';
-  } else if (days === 30) {
+  } else if (days === 30 && hours === 0) {
     displayText = '1 month';
   } else if (days > 30) {
     const months = Math.floor(days / 30);
     const remainingDays = days % 30;
     displayText = `${months} month${months > 1 ? 's' : ''}${remainingDays > 0 ? ` ${remainingDays} day${remainingDays > 1 ? 's' : ''}` : ''}`;
+  } else if (hours > 0) {
+    displayText = `${days} day${days > 1 ? 's' : ''} ${hours} hour${hours > 1 ? 's' : ''}`;
   } else {
     displayText = `${days} day${days > 1 ? 's' : ''}`;
   }
 
   return {
-    days,
+    days: Math.ceil(totalHours / 24),
+    hours: Math.round(totalHours),
     displayText,
   };
 }

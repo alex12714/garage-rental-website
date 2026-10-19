@@ -30,6 +30,12 @@ function SuccessContent() {
           {t('success.title')}
         </h1>
 
+        {/* Deposit Paid Badge */}
+        <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full mb-6">
+          <span className="text-lg">💳</span>
+          <span className="font-semibold">{t('success.depositAmount')}</span>
+        </div>
+
         {/* Message */}
         <p className="text-lg text-gray-600 mb-8">
           {t('success.message')}
@@ -47,40 +53,83 @@ function SuccessContent() {
           </div>
         )}
 
-        {/* Important Info */}
+        {/* Remaining Payment Notice */}
+        <div className="bg-amber-50 border-2 border-amber-300 rounded-xl p-5 mb-8 text-left">
+          <h3 className="font-bold text-amber-900 mb-2 flex items-center gap-2">
+            <span className="text-2xl">💰</span>
+            <span>{t('success.remainingPayment')}</span>
+          </h3>
+          <p className="text-amber-800">
+            {t('success.remainingDescription')}
+          </p>
+        </div>
+
+        {/* Steps */}
         <div className="space-y-4 mb-8">
-          {/* SMS Notification */}
+          {/* Step 1: Agreement */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-5 text-left">
-            <h3 className="font-bold text-blue-900 mb-2 flex items-center gap-2">
-              <span className="text-2xl">📱</span>
-              <span>{t('success.smsNotification')}</span>
-            </h3>
-            <p className="text-blue-800">
-              {t('success.smsDescription')}
-            </p>
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                1
+              </div>
+              <div>
+                <h3 className="font-bold text-blue-900 mb-2 flex items-center gap-2">
+                  <span className="text-2xl">📝</span>
+                  <span>{t('success.step1Agreement')}</span>
+                </h3>
+                <p className="text-blue-800">
+                  {t('success.step1Description')}
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Video Walkthrough */}
+          {/* Step 2: Phone Call */}
           <div className="bg-green-50 border border-green-200 rounded-lg p-5 text-left">
-            <h3 className="font-bold text-green-900 mb-2 flex items-center gap-2">
-              <span className="text-2xl">🎥</span>
-              <span>{t('success.videoWalkthrough')}</span>
-            </h3>
-            <p className="text-green-800">
-              {t('success.videoDescription')}
-            </p>
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                2
+              </div>
+              <div>
+                <h3 className="font-bold text-green-900 mb-2 flex items-center gap-2">
+                  <span className="text-2xl">📞</span>
+                  <span>{t('success.step2Call')}</span>
+                </h3>
+                <p className="text-green-800">
+                  {t('success.step2Description')}
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Email Confirmation */}
+          {/* Step 3: Meet at Gate */}
           <div className="bg-primary-50 border border-primary-200 rounded-lg p-5 text-left">
-            <h3 className="font-bold text-primary-900 mb-2 flex items-center gap-2">
-              <span className="text-2xl">📧</span>
-              <span>{t('success.emailConfirmation')}</span>
-            </h3>
-            <p className="text-primary-800">
-              {t('success.emailDescription')}
-            </p>
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                3
+              </div>
+              <div>
+                <h3 className="font-bold text-primary-900 mb-2 flex items-center gap-2">
+                  <span className="text-2xl">🔑</span>
+                  <span>{t('success.step3Meeting')}</span>
+                </h3>
+                <p className="text-primary-800">
+                  {t('success.step3Description')}
+                </p>
+              </div>
+            </div>
           </div>
+        </div>
+
+        {/* Important Note */}
+        <div className="bg-gray-50 border border-gray-300 rounded-lg p-5 mb-8 text-left">
+          <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
+            <span className="text-2xl">ℹ️</span>
+            <span>{t('success.importantNote')}</span>
+          </h3>
+          <p className="text-gray-700">
+            {t('success.importantDescription')}
+          </p>
         </div>
 
         {/* Back Button */}

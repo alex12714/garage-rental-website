@@ -72,9 +72,19 @@
     "heatedSpace": "Apsildīta telpa",
     "electricityIncluded": "Elektrība iekļauta",
     "secureAccess": "Droša piekļuve",
-    "access24x7": "24/7 piekļuve"
+    "access24x7": "24/7 piekļuve",
+    "1hour": "1 stunda",
+    "3hours": "3 stundas",
+    "hour": "stunda",
+    "hours": "stundas"
   },
   "booking": {
+    "availability": "Pieejamība",
+    "available": "Pieejams",
+    "booked": "Rezervēts",
+    "bookedDate": "Šis datums ir rezervēts",
+    "availableDate": "Šis datums ir pieejams",
+    "calendarNote": "Kalendārs rāda nākamās 5 nedēļas. Rezervācijas pieejamas līdz 1 mēnesim uz priekšu.",
     "title": "Rezervē savu garāžu",
     "subtitle": "Izvēlies nomas periodu",
     "calendarTitle": "Pieejamības kalendārs",
@@ -100,8 +110,14 @@
       "selectDate": "Lūdzu, izvēlies sākuma un beigu datumu",
       "invalidDate": "Beigu datumam jābūt pēc sākuma datuma",
       "fillRequired": "Lūdzu, aizpildi visus obligātos laukus",
-      "agreeTerms": "Jums jāpiekrīt Noteikumiem un nosacījumiem"
-    }
+      "agreeTerms": "Jums jāpiekrīt Noteikumiem un nosacījumiem",
+      "dateUnavailable": "Izvēlētie datumi pārklājas ar esošajām rezervācijām",
+      "chooseDifferentDates": "Lūdzu, izvēlies citus datumus vai pārbaudi pieejamības kalendāru."
+    },
+    "depositNow": "Depozīts tagad",
+    "remainingBalance": "Atlikusī summa (jāmaksā pirms nomas)",
+    "depositNote": "Pilns maksājums nepieciešams pirms nomas sākuma. Šis €10 depozīts rezervē tavu laika logu.",
+    "payDeposit": "Maksāt €10 depozītu rezervācijai"
   },
   "location": {
     "title": "Atrašanās vieta un piekļuve",
@@ -120,7 +136,8 @@
     "featureOnlinePayment": "Tiešsaistes maksājums",
     "featureInstantBooking": "Tūlītēja rezervācija",
     "heatedYes": "Jā, apsildīta",
-    "heatedNo": "Nav apkures"
+    "heatedNo": "Nav apkures",
+    "photo": "Foto"
   },
   "testimonials": {
     "title": "Ko saka mūsu klienti",
@@ -206,7 +223,7 @@
     },
     "q7": {
       "question": "Kā es piekļūstu garāžai?",
-      "answer": "Pēc maksājuma apstiprinājuma saņemsi e-pastu ar vārtu kodu un detalizētām piekļuves instrukcijām."
+      "answer": "Pēc maksājuma tu parakstīsi nomas līgumu, tad mēs tev piezvanīsim, lai vienotos par tikšanās laiku pie garāžas vārtiem, kur saņemsi atslēgu."
     },
     "q8": {
       "question": "Vai ir pieejami instrumenti?",
@@ -217,7 +234,7 @@
     "company": "Garāžas noma Rīgā",
     "contact": "Sazinies ar mums",
     "email": "info@garagerental.lv",
-    "phone": "+371 2000 0000",
+    "phone": "+371 22532304",
     "terms": "Noteikumi un nosacījumi",
     "privacy": "Privātuma politika",
     "rights": "Visas tiesības aizsargātas",
@@ -241,16 +258,18 @@
       "fullRefundText": "Atcelšana 24 stundas vai vairāk pirms rezervācijas sākuma laika ir tiesīga uz pilnu naudas atmaksu.",
       "noRefund": "Nav atmaksas:",
       "noRefundText": "Rezervācijas, kas atceltas mazāk nekā 24 stundas pirms sākuma laika, nav atmaksājamas. Tas iekļauj arī neierašanos.",
-      "p2": "Lai atceltu rezervāciju, lūdzu, nekavējoties sazinieties ar mums pa e-pastu info@garagerental.lv vai tālruni +371 2000 0000."
+      "p2": "Lai atceltu rezervāciju, lūdzu, nekavējoties sazinieties ar mums pa e-pastu info@garagerental.lv vai tālruni +371 22532304."
     },
     "section3": {
-      "title": "Piekļuve un paziņojumi",
-      "p1": "Pēc veiksmīga maksājuma saņemsiet apstiprinājumu un piekļuves detaļas vairākos veidos:",
-      "smsTitle": "SMS īsziņa",
-      "smsText": "Saņemsiet īsu teksta ziņojumu uz norādīto tālruņa numuru ar vārtu piekļuves kodu un galvenajām instrukcijām.",
-      "videoTitle": "Video pamācība",
-      "videoText": "Tiks nosūtīta saite uz video pamācību, kas parāda, kā atrast un piekļūt garāžai adresē Krustpils iela 31, Pļavnieki, Rīga.",
-      "p2": "Lūdzu, pārliecinieties, ka jūsu tālruņa numurs un e-pasta adrese ir pareizi, veicot rezervāciju. Piekļuves detaļas parasti tiek nosūtītas 5 minūšu laikā pēc maksājuma apstiprinājuma."
+      "title": "Piekļuve un atslēgas nodošana",
+      "p1": "Pēc veiksmīga maksājuma tu saņemsi piekļuvi šādā veidā:",
+      "agreementTitle": "Nomas līgums",
+      "agreementText": "Tu saņemsi nomas līgumu e-pastā, kas jāparaksta elektroniski pirms atslēgas saņemšanas.",
+      "callTitle": "Telefona zvans",
+      "callText": "Mūsu pārstāvis zvanīs, lai vienotos par ērtu tikšanās laiku garāžas atrašanās vietā.",
+      "meetingTitle": "Atslēgas nodošana",
+      "meetingText": "Tiecies ar mūsu pārstāvi norunātajā laikā pie garāžas vārtiem (Krustpils 31, Pļavnieki, Rīga), lai saņemtu atslēgu.",
+      "p2": "Lūdzu, pārliecinies, ka tavs tālruņa numurs un e-pasta adrese ir pareizi rezervācijas laikā. Mēs sazināsimies 2 stundu laikā darba laikā."
     },
     "section4": {
       "title": "Lietošanas noteikumi",
@@ -282,15 +301,21 @@
   },
   "success": {
     "title": "Rezervācija apstiprināta!",
-    "message": "Paldies par rezervāciju. Drīzumā saņemsi apstiprinājumu un piekļuves detaļas.",
+    "message": "Paldies par rezervāciju. Lūdzu, izpildi šīs darbības, lai saņemtu garāžas atslēgu.",
     "bookingId": "Rezervācijas ID",
-    "smsNotification": "SMS īsziņa",
-    "smsDescription": "Piekļuves kods tiks nosūtīts uz tavu tālruni",
-    "videoWalkthrough": "Video pamācība",
-    "videoDescription": "Saite uz atrašanās vietas ceļvedi tiks nosūtīta e-pastā",
-    "emailConfirmation": "E-pasta apstiprinājums",
-    "emailDescription": "Pilnas rezervācijas detaļas un instrukcijas",
-    "backToHome": "Atpakaļ uz sākumu"
+    "step1Agreement": "Paraksti nomas līgumu",
+    "step1Description": "Tu saņemsi nomas līgumu e-pastā. Lūdzu, pārskatiet un parakstiet to elektroniski.",
+    "step2Call": "Gaidi mūsu zvanu",
+    "step2Description": "Mūsu pārstāvis zvanīs, lai vienotos par ērtu tikšanās laiku pie garāžas.",
+    "step3Meeting": "Tiekamies pie vārtiem",
+    "step3Description": "Tiecies ar mūsu pārstāvi norunātajā laikā pie garāžas vārtiem (Krustpils 31, Pļavnieki), lai saņemtu atslēgu.",
+    "importantNote": "Svarīgi",
+    "importantDescription": "Lūdzu, pārliecinies, ka tavs tālruņa numurs ir pareizs un pieejams. Mēs sazināsimies 2 stundu laikā darba laikā.",
+    "backToHome": "Atpakaļ uz sākumu",
+    "depositPaid": "Depozīts samaksāts",
+    "depositAmount": "€10 depozīts samaksāts",
+    "remainingPayment": "Atlikusī summa",
+    "remainingDescription": "Atlikusī summa tiks iekasēta pirms nomas sākuma."
   },
   "error": {
     "title": "Kaut kas nogāja greizi",

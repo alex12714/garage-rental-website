@@ -6,7 +6,7 @@ import { pricingOptions } from '@/lib/pricing';
 
 export default function PricingSlider() {
   const { t } = useTranslation();
-  const [currentIndex, setCurrentIndex] = useState(1); // Start with second option (popular)
+  const [currentIndex, setCurrentIndex] = useState(3); // Start with popular option (3 days)
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % pricingOptions.length);
@@ -19,6 +19,16 @@ export default function PricingSlider() {
   const currentOption = pricingOptions[currentIndex];
   const prevOption = pricingOptions[(currentIndex - 1 + pricingOptions.length) % pricingOptions.length];
   const nextOption = pricingOptions[(currentIndex + 1) % pricingOptions.length];
+
+  const getDurationText = (option: typeof currentOption) => {
+    if (option.hours) {
+      return `${option.hours} ${option.hours === 1 ? t('pricing.hour') : t('pricing.hours')}`;
+    }
+    if (option.days) {
+      return `${option.days} ${option.days === 1 ? t('pricing.day') : t('pricing.days')}`;
+    }
+    return '';
+  };
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
@@ -94,7 +104,7 @@ export default function PricingSlider() {
                     {t(`pricing.${currentOption.duration}`)}
                   </h3>
                   <p className="text-sm text-gray-500">
-                    {currentOption.days} {currentOption.days === 1 ? t('pricing.day') : t('pricing.days')}
+                    {getDurationText(currentOption)}
                   </p>
                 </div>
 
@@ -108,10 +118,15 @@ export default function PricingSlider() {
                       €{currentOption.pricePerDay.toFixed(2)}/{t('pricing.day')}
                     </div>
                   )}
+                  {currentOption.pricePerHour && (
+                    <div className="text-sm text-gray-500">
+                      €{currentOption.pricePerHour.toFixed(2)}/{t('pricing.hour')}
+                    </div>
+                  )}
                 </div>
 
                 {/* Best Value Badge for longer durations */}
-                {currentOption.days >= 7 && (
+                {currentOption.days && currentOption.days >= 7 && (
                   <div className="text-center mb-6">
                     <span className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-base font-semibold">
                       💰 {t('pricing.bestValue')}

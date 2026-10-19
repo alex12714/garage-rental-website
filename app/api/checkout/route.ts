@@ -1,5 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { createCheckoutSession } from '@/lib/stripe';
+import { NextRequest, NextResponse } from "next/server";
+import { createCheckoutSession, DEPOSIT_AMOUNT } from "@/lib/stripe";
 
 export async function POST(request: NextRequest) {
   try {
@@ -18,54 +18,56 @@ export async function POST(request: NextRequest) {
     // Validate required fields
     if (!startTime || !endTime || !customerName || !customerEmail || !customerPhone || !amount) {
       return NextResponse.json(
-        { error: 'Missing required fields' },
+        { error: "Missing required fields" },
         { status: 400 }
       );
     }
 
-    // Create Stripe checkout session
+    // Create Stripe checkout session (will charge deposit amount)
     const session = await createCheckoutSession({
       amount,
       customerEmail,
       customerName,
       startTime,
       endTime,
-      language: language || 'en',
+      language: language || "en",
     });
 
     // Send booking data to webhook
     try {
       await fetch(process.env.WEBHOOK_URL!, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           booking_id: session.id,
           customer_name: customerName,
           customer_email: customerEmail,
           customer_phone: customerPhone,
-          special_requests: specialRequests || '',
+          special_requests: specialRequests || "",
           start_time: startTime,
           end_time: endTime,
           duration_hours: (new Date(endTime).getTime() - new Date(startTime).getTime()) / (1000 * 60 * 60),
           total_price: amount,
-          payment_status: 'pending',
+          deposit_amount: DEPOSIT_AMOUNT,
+          remaining_balance: amount - DEPOSIT_AMOUNT,
+          payment_status: "deposit_paid",
           language,
           created_at: new Date().toISOString(),
           stripe_session_id: session.id,
         }),
       });
     } catch (webhookError) {
-      console.error('Webhook error:', webhookError);
+      console.error("Webhook error:", webhookError);
       // Continue even if webhook fails
     }
 
     return NextResponse.json({ url: session.url });
   } catch (error: any) {
-    console.error('Checkout error:', error);
+    console.error("Checkout error:", error);
     return NextResponse.json(
-      { error: error?.message || 'Failed to create checkout session' },
+      { error: error?.message || "Failed to create checkout session" },
       { status: 500 }
     );
   }

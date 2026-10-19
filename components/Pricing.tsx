@@ -20,11 +20,11 @@ export default function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
           {pricingOptions.map((option) => (
             <div
               key={option.duration}
-              className={`relative bg-white border-2 rounded-xl p-6 transition-all hover:shadow-xl ${
+              className={`relative bg-white border-2 rounded-xl p-4 transition-all hover:shadow-xl ${
                 option.popular
                   ? 'border-primary-500 shadow-lg'
                   : 'border-gray-200 hover:border-primary-300'
@@ -33,25 +33,28 @@ export default function Pricing() {
               {/* Popular Badge */}
               {option.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                  <span className="bg-primary-500 text-white px-2 py-0.5 rounded-full text-xs font-semibold">
                     POPULAR
                   </span>
                 </div>
               )}
 
               {/* Duration */}
-              <div className="text-center mb-4">
-                <h3 className="text-lg font-bold text-gray-900 mb-1">
+              <div className="text-center mb-3">
+                <h3 className="text-base font-bold text-gray-900 mb-1">
                   {t(`pricing.${option.duration}`)}
                 </h3>
                 <p className="text-xs text-gray-500">
-                  {option.days} {option.days === 1 ? t('pricing.day') : t('pricing.days')}
+                  {option.hours 
+                    ? `${option.hours} ${option.hours === 1 ? t('pricing.hour') : t('pricing.hours')}`
+                    : `${option.days} ${option.days === 1 ? t('pricing.day') : t('pricing.days')}`
+                  }
                 </p>
               </div>
 
               {/* Price */}
-              <div className="text-center mb-4">
-                <div className="text-4xl font-bold text-primary-600">
+              <div className="text-center mb-3">
+                <div className="text-2xl font-bold text-primary-600">
                   €{option.price}
                 </div>
                 {option.pricePerDay && (
@@ -59,12 +62,17 @@ export default function Pricing() {
                     €{option.pricePerDay.toFixed(2)}/{t('pricing.day')}
                   </p>
                 )}
+                {option.pricePerHour && (
+                  <p className="text-xs text-gray-500 mt-1">
+                    €{option.pricePerHour.toFixed(2)}/{t('pricing.hour')}
+                  </p>
+                )}
               </div>
 
               {/* Best Value for longer durations */}
-              {option.days >= 7 && (
+              {option.days && option.days >= 7 && (
                 <div className="text-center">
-                  <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="inline-block bg-green-100 text-green-800 px-2 py-0.5 rounded-full text-xs font-medium">
                     {t('pricing.bestValue')}
                   </span>
                 </div>

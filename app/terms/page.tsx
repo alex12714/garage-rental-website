@@ -22,7 +22,7 @@ export default function TermsPage() {
             {t('terms.title')}
           </h1>
           <p className="text-gray-600 mt-2">
-            {t('terms.lastUpdated')}: January 14, 2026
+            {t('terms.lastUpdated')}: January 27, 2026
           </p>
         </div>
       </div>
@@ -63,25 +63,38 @@ export default function TermsPage() {
             </div>
           </section>
 
-          {/* Section 3: Access & Notifications */}
+          {/* Section 3: Access & Key Handover */}
           <section className="border-t pt-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               3. {t('terms.section3.title')}
             </h2>
             <div className="space-y-3 text-gray-700">
               <p>{t('terms.section3.p1')}</p>
+              
+              {/* Step 1: Agreement */}
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 my-4">
                 <h3 className="font-semibold text-blue-900 mb-2">
-                  📱 {t('terms.section3.smsTitle')}
+                  📝 {t('terms.section3.agreementTitle')}
                 </h3>
-                <p className="text-blue-800">{t('terms.section3.smsText')}</p>
+                <p className="text-blue-800">{t('terms.section3.agreementText')}</p>
               </div>
+              
+              {/* Step 2: Phone Call */}
               <div className="bg-green-50 border border-green-200 rounded-lg p-4 my-4">
                 <h3 className="font-semibold text-green-900 mb-2">
-                  🎥 {t('terms.section3.videoTitle')}
+                  📞 {t('terms.section3.callTitle')}
                 </h3>
-                <p className="text-green-800">{t('terms.section3.videoText')}</p>
+                <p className="text-green-800">{t('terms.section3.callText')}</p>
               </div>
+              
+              {/* Step 3: Key Handover */}
+              <div className="bg-primary-50 border border-primary-200 rounded-lg p-4 my-4">
+                <h3 className="font-semibold text-primary-900 mb-2">
+                  🔑 {t('terms.section3.meetingTitle')}
+                </h3>
+                <p className="text-primary-800">{t('terms.section3.meetingText')}</p>
+              </div>
+              
               <p>{t('terms.section3.p2')}</p>
             </div>
           </section>
@@ -134,7 +147,7 @@ export default function TermsPage() {
             </h2>
             <div className="space-y-2 text-gray-700">
               <p><strong>{t('terms.section7.email')}:</strong> info@garagerental.lv</p>
-              <p><strong>{t('terms.section7.phone')}:</strong> +371 2000 0000</p>
+              <p><strong>{t('terms.section7.phone')}:</strong> +371 22532304</p>
             </div>
           </section>
 
